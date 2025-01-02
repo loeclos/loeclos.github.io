@@ -1,6 +1,5 @@
 {
   "name": "my-project",
-  "homepage": "https://marsianjohncarter.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
