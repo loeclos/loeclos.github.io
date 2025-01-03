@@ -186,7 +186,7 @@ const View = ({ skills }) => {
             {Object.keys(skills).map((key, index) => (
                 <div
                     key={index}
-                    className="w-full sm:text-center max-w-md p-4 rounded-lg sm:p-8 bg-gray-800 shadow hover:shadow-slate-700 transition-all ease-in-out duration-300 sm:mx-auto"
+                    className="w-full sm:text-center max-w-md p-4 rounded-3xl sm:p-8 bg-gray-800 shadow hover:shadow-slate-700 transition-all ease-in-out duration-300 sm:mx-auto"
                 >
                     <div className="flex items-center justify-between mb-4">
                         <h5 className="text-xl font-bold leading-none text-white">

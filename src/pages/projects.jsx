@@ -90,7 +90,7 @@ const ProjectCard = ({
     return (
         <div
             key={id}
-            className="text-white p-6 rounded-lg shadow-lg shadow-slate-950 flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 "
+            className="text-white my-5 p-6 rounded-3xl shadow-lg shadow-slate-950 flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 bg-gray-800"
         >
             <div className="flex flex-col justify-between md:w-2/3">
                 <h2 className="text-2xl font-bold">{title}</h2>
@@ -110,7 +110,7 @@ const ProjectCard = ({
                 </div>
                 <a
                     href={codeLink}
-                    className="bg-blue-500 active:bg-blue-600 text-white px-4 py-2 rounded-lg w-fit"
+                    className="bg-blue-700 active:bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg w-fit transition-all duration-300 ease-in-out"
                     role="button"
                 >
                     View code
@@ -119,7 +119,7 @@ const ProjectCard = ({
             <img
                 src={imageSrc}
                 alt={title}
-                className="rounded-lg md:w-1/3 object-cover border border-gray-300"
+                className="md:w-1/3 object-cover border border-gray-300 rounded-3xl"
             />
         </div>
     );

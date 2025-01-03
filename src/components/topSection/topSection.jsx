@@ -12,9 +12,9 @@ function scrollToSkills() {
 
 const TopSection = () => {
     return (
-        <section className="bg-gray-900 pt-16 pb-72 sm:pb-64 md:pb-0 lg:pb-0 xl:pb-0 min-h-screen">
+        <section className="bg-gray-900 pt-16 pb-72 sm:pb-64 md:pb-0 lg:pb-0 xl:pb-0">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-                <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-lg p-8 md:p-12 mb-8">
+                <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-3xl p-8 md:p-12 mb-8">
                     <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-2">
                         Hello!
                     </h1>
@@ -46,7 +46,7 @@ const TopSection = () => {
                     </button>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 h-96">
-                    <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-lg p-8 md:p-12">
+                    <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-3xl p-8 md:p-12">
                         <a
                             href="#"
                             className="text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md bg-gray-700 text-purple-400 mb-2"
@@ -98,7 +98,7 @@ const TopSection = () => {
                             </svg>
                         </Link>
                     </div>
-                    <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-lg p-8 md:p-12">
+                    <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-3xl p-8 md:p-12">
                         <Link
                             to="https://github.com/marsianjohncarter"
                             className="text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded-md bg-gray-700 text-white mb-2"

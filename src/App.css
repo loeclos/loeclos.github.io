@@ -4,6 +4,10 @@
     text-decoration: none;
 }
 
+button {
+    cursor: none;
+}
+
 
 .link {
     position: relative;
@@ -35,3 +39,63 @@
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
+
+
+.center, .outerCircle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  .center {
+    background-color: #fff;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+  
+  .outerCircle {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: 0.1s ease;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+  
+  .click {
+    animation: click 300ms ease 1;
+  }
+  .header{
+    background-color: #000;
+  }
+  .hover {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  @keyframes click {
+    0% {
+      width: 30px;
+      height: 30px;
+    }
+    50% {
+      width: 50px;
+      height: 50px;
+    }
+    100% {
+      width: 30px;
+      height: 30px;
+    }
+  }
