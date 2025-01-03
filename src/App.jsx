@@ -18,10 +18,10 @@ function App() {
 
             <Suspense fallback={<Spinner />}>
                 <Routes location={location}>
-                    <Route path="/marsianjohncarter/" element={<Home />} />
-                    <Route path="/marsianjohncarter/projects" element={<ProjectSection />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/projects" element={<ProjectSection />} />
                     <Route path="*" element={<Page404 />} />
-                    <Route path="/marsianjohncarter/contact" element={<ContactCard />} />
+                    <Route path="/contact" element={<ContactCard />} />
                 </Routes>
             </Suspense>
             <Footer />
