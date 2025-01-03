@@ -5,9 +5,9 @@ const NavBar = () => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const navLinks = ['Home', 'Projects', 'Contact'];
     const navLink = {
-        Home: '/marsianjohncarter/',
-        Projects: '/marsianjohncarter/projects',
-        Contact: '/marsianjohncarter/contact',
+        Home: '/',
+        Projects: '/projects',
+        Contact: '/contact',
     };
 
     const handleScroll = () => {
