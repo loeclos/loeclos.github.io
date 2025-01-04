@@ -2,7 +2,7 @@ const projects = [
     {
         id: 1,
         title: 'Olhar Device',
-        link: 'Not Available',
+        link: 'https://olhar.media/',
         codeLink: 'https://github.com/marsianjohncarter/OlharDevice',
         description:
             'This Python application is designed to download and display videos. It provides a user interface for video playback and also a QR code generation function. The application utilizes various functionalities including location retrieval, screen brightness adjustment, and video download.',
@@ -13,7 +13,7 @@ const projects = [
             },
             { name: 'PyQt', icon: 'https://img.icons8.com/ios/50/qt.png' },
         ],
-        imageSrc: 'Not Available.png',
+        imageSrc: 'taxi_promo.jpg',
     },
     {
         id: 2,
