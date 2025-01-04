@@ -1,6 +1,6 @@
 const Spinner = () => {
     return (
-        <div className="justify-center">
+        <div className="flex items-center justify-center">
           <svg
         xmlns="http://www.w3.org/2000/svg"
         width="150px"

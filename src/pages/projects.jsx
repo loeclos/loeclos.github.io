@@ -167,6 +167,7 @@ function ProjectSection() {
                 {projects.map((element) => {
                     return (
                         <ProjectCard
+                            key={element.id}
                             id={element.id}
                             title={element.title}
                             link={element.link}
