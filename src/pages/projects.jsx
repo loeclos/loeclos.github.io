@@ -13,7 +13,7 @@ const projects = [
             },
             { name: 'PyQt', icon: 'https://img.icons8.com/ios/50/qt.png' },
         ],
-        imageSrc: '/taxi_promo.jpg',
+        imageSrc: '/taxi_promo_1.jpg',
     },
     {
         id: 2,

@@ -21,8 +21,8 @@ function App() {
                 <Routes location={location}>
                     <Route path="/" element={<Home />} />
                     <Route path="/projects" element={<ProjectSection />} />
-                    <Route path="*" element={<Page404 />} />
                     <Route path="/contact" element={<ContactCard />} />
+                    <Route path="*" element={<Page404 />} />
                 </Routes>
             </Suspense>
             <Footer />
