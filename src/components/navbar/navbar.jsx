@@ -31,7 +31,8 @@ const NavBar = () => {
     <div
         className={`${
             isVisible ? 'translate-y-0' : '-translate-y-24'
-        } w-full mx-auto max-w-screen-xl p-4 z-50 backdrop-blur-lg border border-slate-700 rounded-xl transition-transform duration-300`}
+        } w-full mx-auto max-w-screen-xl p-4 z-50 backdrop-blur-lg border border-slate-700 shadow-xl rounded-xl transition-transform duration-300`}
+
     >
         <ul className="flex justify-center">
             {navLinks.map((link, index) => (
@@ -39,7 +40,7 @@ const NavBar = () => {
                     <strong>
                         <Link
                             to={`${navLink[link]}`}
-                            className="link text-neutral-300 hover:text-red-500 transition-colors duration-300 ease-in-out"
+                            className="link text-neutral-300 transition-colors duration-300 ease-in-out"
                         >
                             {link}
                         </Link>

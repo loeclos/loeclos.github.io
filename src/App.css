@@ -4,9 +4,6 @@
     text-decoration: none;
 }
 
-button {
-    cursor: none;
-}
 
 
 .link {
@@ -16,7 +13,7 @@ button {
 }
 
 .link:hover {
-    color: #e53724;
+    color: #D8C4B6;
 }
 
 .link:before {
@@ -26,7 +23,7 @@ button {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #e53724;
+    background-color: #D8C4B6;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);

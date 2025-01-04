@@ -12,7 +12,7 @@ function scrollToSkills() {
 
 const TopSection = () => {
     return (
-        <section className="bg-gray-900 pt-16 pb-72 sm:pb-64 md:pb-0 lg:pb-0 xl:pb-0">
+        <section className="pt-16 pb-72 sm:pb-64 md:pb-0 lg:pb-0 xl:pb-0 ">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
                 <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-3xl p-8 md:p-12 mb-8">
                     <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-2">
@@ -25,7 +25,7 @@ const TopSection = () => {
 
                     <button
                         onClick={scrollToSkills}
-                        className="inline-flex justify-center items-center transition-all py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-red-700 hover:bg-red-800 focus:ring-4  dark:focus:ring-red-900"
+                        className="inline-flex justify-center items-center transition-all py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-[#45707a] active:bg-[#395c64] hover:bg-[#304d53] focus:ring-4  focus:ring-[#45707a]"
                     >
                         Jump to my skills
                         <svg
@@ -77,7 +77,7 @@ const TopSection = () => {
                             decisions.
                         </p>
                         <Link
-                            to="/marsianjohncarter/projects"
+                            to="/projects"
                             className="text-blue-500 hover:underline font-medium text-lg inline-flex items-center"
                         >
                             Projects

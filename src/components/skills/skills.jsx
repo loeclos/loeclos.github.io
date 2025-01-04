@@ -169,7 +169,7 @@ const Skills = () => {
                     id="skills"
                     className="mt-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl text-white text-center bg-clip-border p-6 bg-gradient-to-r from-slate-700 via-slate-800 to-slate-700 rounded-lg shadow-lg hover:shadow-slate-700/50 transition-all duration-300 ease-linear"
                 >
-                    Skills
+                    Skills and tools
                 </h1>
             </div>
 
