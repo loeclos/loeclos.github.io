@@ -69,5 +69,18 @@ window.addEventListener('DOMContentLoaded', function () {
             Outer.classList.remove('click');
         }, 300);
     });
+    const Elements = [
+        "BUTTON",
+        "A",
+        "INPUT",
+        "SELECT"
+      ]
+      document.addEventListener('mouseover',(e) => {
+         if(Elements.includes(e.target.tagName)){
+              Outer.classList.add('hover');
+         }else{
+           Outer.classList.remove('hover');
+         }
+      });
 });
 export default App;
