@@ -31,7 +31,7 @@ const NavBar = () => {
             <div
                 className={`${
                     isVisible ? 'translate-y-0' : '-translate-y-24'
-                } w-full mx-auto max-w-screen-xl p-4 z-50 backdrop-blur-lg border border-slate-700 shadow-xl rounded-xl transition-transform duration-300`}
+                } w-full mx-auto max-w-screen-xl p-4 z-50 backdrop-blur-lg border border-slate-700 shadow-xl rounded-xl transition-transform duration-300 bg-black/50`}
             >
                 <ul className="flex justify-center">
                     {navLinks.map((link, index) => (
