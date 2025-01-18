@@ -14,36 +14,43 @@ const TopSection = () => {
     return (
         <section className="pt-16 pb-72 sm:pb-64 md:pb-0 lg:pb-0 xl:pb-0 ">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-                <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-3xl p-8 md:p-12 mb-8">
-                    <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-2">
-                        Hello!
-                    </h1>
-                    <p className="text-lg font-normal text-gray-400 mb-6">
-                        My name is john and I'm a Frontend/Flask Backend/Machine
-                        developer
-                    </p>
+                <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-3xl p-8 md:p-12 mb-8 flex items-center justify-between">
+                    <div>
+                        <h1 className="text-white text-3xl md:text-5xl font-extrabold mb-2">
+                            Hello!
+                        </h1>
+                        <p className="text-lg font-normal text-gray-400 mb-6">
+                            My name is john and I'm a Frontend/Flask Backend/Machine
+                            developer
+                        </p>
 
-                    <button
-                        onClick={scrollToSkills}
-                        className="inline-flex justify-center items-center transition-all py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-[#45707a] active:bg-[#395c64] hover:bg-[#304d53] focus:ring-4  focus:ring-[#45707a]"
-                    >
-                        Jump to my skills
-                        <svg
-                            className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 14 10"
+                        <button
+                            onClick={scrollToSkills}
+                            className="inline-flex justify-center items-center transition-all py-2.5 px-5 text-base font-medium text-center text-white rounded-lg bg-[#45707a] active:bg-[#395c64] hover:bg-[#304d53] focus:ring-4  focus:ring-[#45707a]"
                         >
-                            <path
-                                stroke="currentColor"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M1 5h12m0 0L9 1m4 4L9 9"
-                            />
-                        </svg>
-                    </button>
+                            Jump to my skills
+                            <svg
+                                className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 14 10"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                    <img
+                        src="/profile.jpeg"
+                        alt="John profile"
+                        className="hidden md:block w-44 h-44 rounded-3xl"
+                    />
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 h-96">
                     <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-3xl p-8 md:p-12">

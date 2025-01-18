@@ -4,37 +4,37 @@ const skillsDict = {
     Languages: [
         {
             name: 'Javascript',
-            level: 'Advanced',
+            level: "I know what I'm doing",
             percentage: '98',
             link: 'https://img.icons8.com/fluency/48/javascript.png',
         },
         {
             name: 'Python',
-            level: 'Advanced',
+            level: "Can create a good backend.",
             percentage: '98',
             link: 'https://img.icons8.com/color/48/python--v1.png',
         },
         {
             name: 'CSS',
-            level: 'Proficient',
+            level: "CSS is easy!",
             percentage: '95',
             link: 'https://img.icons8.com/color/48/css3.png',
         },
         {
             name: 'HTML',
-            level: 'Advanced',
+            level: "I have created a couple websites.",
             percentage: '100',
             link: 'https://img.icons8.com/color/48/html-5--v1.png',
         },
         {
             name: 'SASS',
-            level: 'Familiar',
+            level: 'Basically CSS.',
             percentage: '70',
             link: 'https://img.icons8.com/color/48/sass-avatar.png',
         },
         {
             name: 'Php',
-            level: 'Not worth noticing',
+            level: 'Had a couple glances at it.',
             percentage: '5',
             link: 'https://img.icons8.com/fluency/48/php.png',
         },
@@ -43,37 +43,37 @@ const skillsDict = {
     Tools: [
         {
             name: 'Git',
-            level: 'Advanced',
+            level: "You remeber that repo error? Yeah, that was me.",
             percentage: '99',
             link: 'https://img.icons8.com/color/48/git.png',
         },
         {
             name: 'Github',
-            level: 'Advanced',
+            level: "GUI version of Git.",
             percentage: '99',
             link: 'https://img.icons8.com/fluency/48/github.png',
         },
         {
             name: 'Vite',
-            level: 'Advanced',
+            level: 'All you have to do is run "npm run dev"',
             percentage: '100',
             link: 'https://img.icons8.com/fluency/48/vite.png',
         },
         {
             name: 'Firebase',
-            level: 'Proficient',
+            level: 'Google database.',
             percentage: '90',
             link: 'https://img.icons8.com/color/48/firebase.png',
         },
         {
             name: 'Render',
-            level: 'Proficient',
+            level: 'Easy GUI, Easy to learn.',
             percentage: '95',
             link: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.uBXapYnVomXOvJ8bFROhPgAAAA%26pid%3DApi&f=1&ipt=5707ea7d4e88b1cf1d5e14384486e1c3794164708b229f18c46c39bf6d6d1c90&ipo=images',
         },
         {
             name: 'MongoDB',
-            level: 'Weak',
+            level: "I'd rather not comment.",
             percentage: '20',
             link: 'https://img.icons8.com/color/48/mongodb.png',
         },
@@ -82,37 +82,37 @@ const skillsDict = {
     Libraries: [
         {
             name: 'React',
-            level: 'Advanced',
+            level: '🤯',
             percentage: '98',
             link: 'https://img.icons8.com/color/48/react-native.png',
         },
         {
             name: 'Tailwind',
-            level: 'Advanced',
+            level: 'A more powerful version of bootstrap.',
             percentage: '100',
             link: 'https://img.icons8.com/fluency/48/tailwind_css.png',
         },
         {
             name: 'Bootstrap',
-            level: 'Advanced',
+            level: 'A precompiled css class library.',
             percentage: '100',
             link: 'https://img.icons8.com/color/48/bootstrap.png',
         },
         {
             name: 'Flask',
-            level: 'Advanced',
+            level: 'Remember I told you I could create a good backend with python?',
             percentage: '99',
             link: 'https://img.icons8.com/fluency/48/flask.png',
         },
         {
             name: 'Numpy',
-            level: 'Advanced',
+            level: 'Numbers, numbers, and numbers.',
             percentage: '97',
             link: 'https://img.icons8.com/color/48/numpy.png',
         },
         {
             name: 'Pandas',
-            level: 'Advanced',
+            level: 'Easy python library for CSVs.',
             percentage: '99',
             link: 'https://img.icons8.com/color/48/pandas.png',
         },
@@ -121,43 +121,43 @@ const skillsDict = {
     Other: [
         {
             name: 'Machine Learning',
-            level: 'Advanced',
+            level: 'When AI takes over the world, you know who to blame.',
             percentage: '98',
             link: 'https://img.icons8.com/pulsar-color/48/machine-learning.png',
         },
         {
             name: 'Deep Learning',
-            level: 'Advanced',
+            level: 'Same as above.',
             percentage: '98',
             link: 'https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-deep-learning-data-analytics-flaticons-flat-flat-icons.png',
         },
         {
             name: 'Frontend (react + tailwind)',
-            level: 'proficient',
+            level: 'Combine two previous skills and you get another!',
             percentage: '95',
             link: 'https://img.icons8.com/nolan/64/code--v2.png',
         },
         {
             name: 'Backend (python + flask)',
-            level: 'proficient',
+            level: 'Same as the one before!',
             percentage: '95',
             link: 'https://img.icons8.com/nolan/64/code--v1.png',
         },
         {
             name: 'Linux',
-            level: 'Advanced',
+            level: 'Terminal, terminal, terminal.',
             percentage: '97',
             link: 'https://img.icons8.com/color/48/linux.png',
         },
         {
             name: 'Windows',
-            level: 'Advanced',
+            level: 'I broke it couple times and thats how I found Linux.',
             percentage: '96',
             link: 'https://img.icons8.com/color/48/windows.png',
         },
         {
             name: 'Vscode',
-            level: 'Advanced',
+            level: 'Powerful tool.',
             percentage: '98',
             link: 'https://img.icons8.com/color/48/visual-studio-code-2019.png',
         },
@@ -306,10 +306,10 @@ const View = ({ skills }) => {
                                             />
                                         </div>
                                         <div className="flex-1 min-w-0 m-2">
-                                            <p className="text-sm font-medium truncate text-white">
+                                            <p className="text-sm font-medium line-clamp-2 text-white">
                                                 {skill.name} - {skill.level}
                                             </p>
-                                            <div className="w-full  rounded-full h-2.5 mb-4 mt-4 bg-gray-700">
+                                            <div className="w-full rounded-full h-2.5 mb-4 mt-4 bg-gray-700">
                                                 <div
                                                     className={
                                                         'h-2.5 rounded-full bg-green-500 ' +
@@ -330,9 +330,6 @@ const View = ({ skills }) => {
                                                     }}
                                                 />
                                             </div>
-                                            <p className="text-sm truncate text-gray-400">
-                                                {skill.level}
-                                            </p>
                                         </div>
                                         <div className="inline-flex items-center text-base font-semibold text-white">
                                             {skill.percentage}%
