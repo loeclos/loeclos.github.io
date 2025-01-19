@@ -168,7 +168,7 @@ const ProjectCard = ({
     technologies,
     imageSrc,
 }) => {
-    return (
+    return ( 
 <>
 
             <div
