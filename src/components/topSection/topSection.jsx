@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ExplodingChicken from '../ExplodingChicken/ExplodingChicken';
 
 function scrollToSkills() {
     const skillsSection = document.getElementById("skills");
@@ -104,6 +105,13 @@ const TopSection = () => {
                                 />
                             </svg>
                         </Link>
+                        <div className="h-px bg-gray-700 my-4"></div>
+                        <div className="px-4">
+                        <p className="text-sm text-pretty font-normal text-gray-400 mb-4">
+                            By the way, I'm a big fan of "Exploding Chicken", so I've decided to add it to my portfolio.
+                        </p>
+                        <ExplodingChicken />
+                        </div>
                     </div>
                     <div className="bg-gray-800 shadow-lg hover:shadow-slate-700/50 transition-all ease-in-out duration-300 rounded-3xl p-8 md:p-12">
                         <Link

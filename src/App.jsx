@@ -9,7 +9,6 @@ const Page404 = lazy(() => import('./pages/404'));
 const ProjectSection = lazy(() => import('./pages/projects'));
 const ContactCard = lazy(() => import('./pages/Contact'));
 import Spinner from './components/spinner/spinner';
-
 import './App.css';
 
 function App() {
