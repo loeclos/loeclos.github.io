@@ -1,0 +1,91 @@
+.card {
+    --start: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 280px;
+    height: 350px;
+    margin: 10px;
+    padding: 10px 40px;
+    background-color: #040404;
+    border-radius: 14px;
+    /* transition: border-color 0.3s ease-in-out; */
+  }
+  
+  .card::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 14px;
+    border: 2px solid transparent;
+    background: var(--gradient);
+    background-attachment: fixed;
+    mask: linear-gradient(#0000, #0000),
+      conic-gradient(
+        from calc((var(--start) - (20 * 1.1)) * 1deg),
+        #ffffff1f 0deg,
+        white,
+        #ffffff00 100deg
+      );
+    mask-composite: intersect;
+    mask-clip: padding-box, border-box;
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+  
+  .glow {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(14px);
+  }
+  
+  .glow::before {
+    position: absolute;
+    content: "";
+    width: 98%;
+    height: 98%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 14px;
+    border: 15px solid transparent;
+    background: var(--gradient);
+    background-attachment: fixed;
+    /* mask: linear-gradient(#0000, #0000), 
+    conic-gradient(
+      from calc(var(--start)  * 1deg), 
+      #000 0deg, 
+      #ffffff, 
+      rgba(0, 0, 0, 0) 60deg
+      ); */
+    mask: linear-gradient(#0000, #0000),
+      conic-gradient(
+        from calc((var(--start) - (20 * 1.1)) * 1deg),
+        #ffffff1f 0deg,
+        white,
+        #ffffff00 100deg
+      );
+    mask-composite: intersect;
+    mask-clip: padding-box, border-box;
+    opacity: 0;
+    transition: 1s ease;
+  }
+  
+  .card:hover > .glow::before {
+    opacity: 1;
+  }
+  .card:hover::before {
+    opacity: 0.6;
+  }
+  
