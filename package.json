@@ -26,6 +26,7 @@
     "@eslint/eslintrc": "^3.2.0",
     "eslint": "^9.19.0",
     "eslint-config-next": "15.2.0-canary.38",
+    "gh-pages": "^6.3.0",
     "tailwind-scrollbar": "^4.0.0"
   }
 }

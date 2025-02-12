@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth !important;
+    cursor: none !important;
+}
+
+#root {
+    font-family: 'M PLUS Code Latin'; 
+}
+
