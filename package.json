@@ -1,33 +1,36 @@
 {
-  "name": "portfolio-website-2.0",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "deploy": "gh-pages -d dist"
-  },
-  "dependencies": {
-    "@radix-ui/react-hover-card": "^1.1.6",
-    "@tailwindcss/postcss": "^4.0.3",
-    "clsx": "^2.1.1",
-    "framer-motion": "^12.4.1",
-    "lucide-react": "^0.475.0",
-    "motion": "^12.4.1",
-    "next": "15.2.0-canary.41",
-    "postcss": "^8.5.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "tailwind-merge": "^3.0.1",
-    "tailwindcss": "^4.0.3"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "eslint": "^9.19.0",
-    "eslint-config-next": "15.2.0-canary.38",
-    "gh-pages": "^6.3.0",
-    "tailwind-scrollbar": "^4.0.0"
-  }
+    "name": "portfolio-website-2.0",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "export": "next build && next export",
+        "start": "next start",
+        "lint": "next lint",
+        "deploy": "gh-pages -d out"
+    },
+    "dependencies": {
+        "@radix-ui/react-hover-card": "^1.1.6",
+        "@tailwindcss/postcss": "^4.0.3",
+        "clsx": "^2.1.1",
+        "framer-motion": "^12.4.1",
+        "lucide-react": "^0.475.0",
+        "motion": "^12.4.1",
+        "next": "15.2.0-canary.41",
+        "postcss": "^8.5.1",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "tailwind-merge": "^3.0.1",
+        "tailwindcss": "^4.0.3"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3.2.0",
+        "eslint": "^9.19.0",
+        "eslint-config-next": "15.2.0-canary.38",
+        "gh-pages": "^6.3.0",
+        "postcss-nesting": "^13.0.1",
+        "tailwind-scrollbar": "^4.0.0"
+    },
+    "homepage": "./app/"
 }

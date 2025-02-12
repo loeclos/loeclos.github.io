@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
+const isGithubPages = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
     images: {
+        unoptimized: true,
         remotePatterns: [
             {
                 protocol: 'https',
@@ -16,6 +19,9 @@ const nextConfig = {
             },
         ], 
     },
+    output: 'export',
+    basePath: isGithubPages ? '/marsianjohncarter.github.io' : '',
+
 };
  
 export default nextConfig;
