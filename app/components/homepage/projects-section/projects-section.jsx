@@ -160,13 +160,12 @@ export default function ProjectSection() {
                                         layoutId={`image-${card.title}-${id}`}
                                     >
                                         <Image
-
                                             src={card.src}
                                             width={0}
                                             height={0}
                                             sizes="100vw"
                                             alt={card.title}
-                                            className="h-60 w-full rounded-lg object-cover aspect-video bg-gray-200"
+                                            className="h-60 w-full rounded-lg object-cover aspect-video bg-gray-200 border border-zinc-200 dark:border-zinc-700"
                                         />
                                     </motion.div>
                                     <div className="flex justify-center items-center flex-col">
