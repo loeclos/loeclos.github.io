@@ -1,5 +1,5 @@
 module.exports = {
-    darkMode: 'media', 
+    darkMode: 'class', 
     variants: {
       scrollbar: ['rounded'], 
     },

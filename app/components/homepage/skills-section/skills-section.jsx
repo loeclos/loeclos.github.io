@@ -8,13 +8,13 @@ const skills = [
         items: [
             {
                 name: 'Javascript',
-                description: "I know what I'm doing",
+                description: "I know what I'm doing (kind of)",
                 percentage: '86',
                 iconName: 'javascript',
             },
             {
                 name: 'Python',
-                description: 'Can create a good backend.',
+                description: 'slither_slither_slither.',
                 percentage: '87',
                 iconName: 'python',
             },
@@ -28,7 +28,7 @@ const skills = [
                 name: 'HTML',
                 description: 'I have created a couple websites.',
                 percentage: '100',
-                iconName: 'html-5--v1',
+                iconName: 'html',
             },
             {
                 name: 'SASS',
@@ -61,7 +61,7 @@ const skills = [
             },
             {
                 name: 'Vite',
-                description: 'All you have to do is run "npm run dev"',
+                description: 'All you have to do is run "npm run dev" 😁',
                 percentage: '100',
                 iconName: 'vite',
             },
@@ -90,21 +90,21 @@ const skills = [
         items: [
             {
                 name: 'React',
-                description: '🤯',
+                description: '🤯 <em>explosion</em>',
                 percentage: '98',
                 iconName: 'react',
             },  
+            {
+                name: 'Bootstrap',
+                description: 'A precompiled CSS class library',
+                percentage: '100',
+                iconName: 'bootstrap',
+            },
             {
                 name: 'Tailwind',
                 description: 'A more powerful version of bootstrap.',
                 percentage: '100',
                 iconName: 'tailwind',
-            },
-            {
-                name: 'Bootstrap',
-                description: 'A precompiled CSS class library.',
-                percentage: '100',
-                iconName: 'bootstrap',
             },
             {
                 name: 'Flask',
@@ -117,13 +117,13 @@ const skills = [
                 name: 'Numpy',
                 description: 'Numbers, numbers, and numbers.',
                 percentage: '97',
-                iconName: 'numpy',
+                iconName: 'python',
             },
             {
                 name: 'Pandas',
                 description: 'Easy Python library for CSVs.',
                 percentage: '89',
-                iconName: 'pandas',
+                iconName: 'python',
             },
         ],
     },
@@ -139,19 +139,19 @@ const skills = [
             },
             {
                 name: 'Deep Learning',
-                description: 'Same as above.',
+                description: 'Same as before.',
                 percentage: '98',
                 iconName: 'ai',
             },
             {
                 name: 'Frontend (React + Tailwind)',
-                description: 'Combine two previous skills and you get another!',
+                description: 'Combine two previous skills and you get a new one!',
                 percentage: '95',
                 iconName: 'react',
             },
             {
                 name: 'Backend (Python + Flask)',
-                description: 'Same as the one before!',
+                description: 'You know, "double, double, toil and trouble"',
                 percentage: '95',
                 iconName: 'flask',
             },
@@ -170,7 +170,7 @@ const skills = [
             },
             {
                 name: 'Vscode',
-                description: 'Powerful tool.',
+                description: 'Powerful tool. Would like to say something else, but nothing comes to mind.',
                 percentage: '98',
                 iconName: 'vscode',
             },
@@ -183,7 +183,7 @@ const skills = [
 export default function SkillsSection() {
     return (
       <div id="skills" className='max-w-[90%] md:max-w-5xl mx-auto px-4'>
-        <div className="text-center px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white">
+        <div className="text-center px-4 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white">
             <h1 className="text-5xl font-bold my-10">Skills</h1>
             <p className="mb-10 italic opacity-55 text-sm">
                 Things I've learned throughout the years.

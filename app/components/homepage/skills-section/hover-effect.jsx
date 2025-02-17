@@ -17,7 +17,7 @@ export const HoverEffect = ({ items, className }) => {
     return (
         <div
             className={cn(
-                'grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10',
+                'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10',
                 className
             )}
         >
@@ -62,7 +62,7 @@ export const HoverEffect = ({ items, className }) => {
                                         src={`https://skillicons.dev/icons?i=${item.iconName}`}
                                         width={40}
                                         height={40}
-                                        className="rounded-full"
+                                        className="border"
                                         alt={item.name}
                                     />
                                 </HoverCardContent>
@@ -80,7 +80,7 @@ export const Card = ({ className, children }) => {
     return (
         <div
             className={cn(
-                'rounded-2xl h-full w-full p-4 overflow-hidden bg-gray-100 dark:bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-200 dark:group-hover:border-slate-700 relative',
+                'rounded-2xl h-full w-full p-2 md:p-4 overflow-hidden bg-gray-100 dark:bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-200 dark:group-hover:border-slate-700 relative',
                 className
             )}
         >
@@ -113,20 +113,12 @@ export const CardDescription = ({ className, children }) => {
     );
 };
 
-const CardFooter = ({ children, className }) => {
-    return (
-        <div className={`flex items-center justify-center pt-10 ${className}`}>
-            {children}
-        </div>
-    );
-};
-
 
 export const CardBar = ({ className, percentage }) => {
     return (
         <div
             className={cn(
-                'absolute right-0 left-0 px-5 items-center justify-center  text-zinc-400 tracking-wide leading-relaxed text-sm bottom-0',
+                'relative right-0 left-0 px-1  items-center justify-center  text-zinc-400 tracking-wide leading-relaxed text-sm bottom-0',
                 className
             )}
         >

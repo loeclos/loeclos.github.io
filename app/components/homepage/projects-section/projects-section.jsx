@@ -86,8 +86,14 @@ export default function ProjectSection() {
                                         />
                                     </motion.div>
 
-                                    <div className="grid grid-rows-2 flex-1 min-h-0 gap-4 py-10 px-15">
-                                        <div className={`grid gap-4 ${active.ctaText === 'View Code' ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2'}`}>
+                                    <div className="grid grid-rows-3 min-h-0 gap-6 py-10 px-15">
+                                        <div
+                                            className={`grid gap-4 mb-5 ${
+                                                active.ctaText === 'View Code'
+                                                    ? 'grid-cols-1'
+                                                    : 'grid-cols-1 md:grid-cols-2'
+                                            }`}
+                                        >
                                             <motion.a
                                                 layout
                                                 initial={{ opacity: 0 }}
@@ -95,7 +101,12 @@ export default function ProjectSection() {
                                                 exit={{ opacity: 0 }}
                                                 href={active.ctaLink}
                                                 target="_blank"
-                                                className={`px-4 py-3 text-sm rounded-2xl w-full max-h-11 font-bold bg-violet-500 hover:bg-violet-600 border-5 border-violet-700 border-t border-l active:border-b active:border-r active:border-t-5 active:border-l-5  text-white transition-colors duration-200 ${active.ctaText === 'View Code' ? 'hidden' : ' block'}`}
+                                                className={`px-4 py-3 text-sm rounded-2xl w-full max-h-11 font-bold bg-violet-500 hover:bg-violet-600 border-5 border-violet-700 border-t border-l active:border-b active:border-r active:border-t-5 active:border-l-5  text-white transition-colors duration-200 ${
+                                                    active.ctaText ===
+                                                    'View Code'
+                                                        ? 'hidden'
+                                                        : ' block'
+                                                }`}
                                             >
                                                 {active.ctaText}
                                             </motion.a>
@@ -112,35 +123,37 @@ export default function ProjectSection() {
                                             </motion.a>
                                         </div>
 
-                                        <div>
-                                            <motion.h3
-                                                layoutId={`title-${active.title}-${id}`}
-                                                className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
-                                            >
-                                                {active.title}
-                                            </motion.h3>
-                                            <motion.p
-                                                layoutId={`info-${active.info}-${id}`}
-                                                className="text-neutral-600 dark:text-neutral-400 text-base"
-                                            >
-                                                {active.info}
-                                            </motion.p>
-                                        </div>
-
-                                        <motion.div
-                                            layout
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            exit={{ opacity: 0 }}
-                                            className="overflow-y-auto px-4 pb-6 scrollbar-hidden"
-                                        >
-                                            <div className="text-neutral-600 dark:text-neutral-400 text-sm md:text-base flex items-center text-center">
-                                                {typeof active.content ===
-                                                'function'
-                                                    ? active.content()
-                                                    : active.content}
+                                        <div className="overflow-y-auto h-full row-span-2 scrollbar-hidden">
+                                            <div className="px-4 pb-10">
+                                                <motion.h3
+                                                    layoutId={`title-${active.title}-${id}`}
+                                                    className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
+                                                >
+                                                    {active.title}
+                                                </motion.h3>
+                                                <motion.p
+                                                    layoutId={`info-${active.info}-${id}`}
+                                                    className="text-neutral-600 dark:text-neutral-400 text-base"
+                                                >
+                                                    {active.info}
+                                                </motion.p>
                                             </div>
-                                        </motion.div>
+
+                                            <motion.div
+                                                layout
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                exit={{ opacity: 0 }}
+                                                className="overflow-y-auto px-4 pb-6 scrollbar-hidden"
+                                            >
+                                                <div className="text-neutral-600 dark:text-neutral-400 text-sm md:text-base flex items-center text-center">
+                                                    {typeof active.content ===
+                                                    'function'
+                                                        ? active.content()
+                                                        : active.content}
+                                                </div>
+                                            </motion.div>
+                                        </div>
                                     </div>
                                 </motion.div>
                             </div>
@@ -214,30 +227,53 @@ export const CloseIcon = () => {
 };
 
 const skillIcons = {
-    "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    "Tailwind": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-    "Flask": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
-    "Numpy": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
-    "Pandas": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
-    "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
-    "Vite": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
-    "Firebase": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-    "MongoDB": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    "PNPM": "https://img.icons8.com/fluency/48/pnpm.png",
-    'JavaScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-    'Bootstrap': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+    Python: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    React: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    NextJs: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+    Tailwind:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+    Flask: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg',
+    Numpy: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg',
+    Pandas: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg',
+    Git: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    GitHub: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+    Vite: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg',
+    Firebase:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
+    Vercel: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg',
+    MongoDB:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    PNPM: 'https://img.icons8.com/fluency/48/pnpm.png',
+    JavaScript:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    Bootstrap:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+    Qt: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg',
 };
-
 
 const skillsUsed = ({ skills }) => {
     return (
-        <div className="flex gap-4 dark:bg-zinc-800 border dark:border-zinc-700 p-3 rounded-3xl max-w-fit min-w-fit mx-auto justify-center">
+        // <div className="flex gap-4 dark:bg-zinc-800 border dark:border-zinc-700 p-3 rounded-3xl max-w-fit min-w-fit mx-auto justify-center">
+        //     {skills.map((skill) => (
+        //         <div
+        //             key={skill.name}
+        //             className="bg-zinc-100 dark:bg-zinc-700 border dark:border-zinc-600 p-0 md:p-2 rounded-full flex gap-2 hover:scale-120 transition-all duration-200"
+        //         >
+        //             <Image
+        //                 width={30}
+        //                 height={30}
+        //                 src={skillIcons[skill.name]}
+        //                 alt={skill.name}
+        //                 className="p-1"
+        //             />
+        //         </div>
+        //     ))}
+        // </div>
+        <div className="flex flex-wrap gap-4 dark:bg-zinc-800 border dark:border-zinc-700 p-3 rounded-3xl mx-auto justify-center">
             {skills.map((skill) => (
                 <div
                     key={skill.name}
-                    className="bg-zinc-100 dark:bg-zinc-700 border dark:border-zinc-600 p-2 rounded-full flex gap-2 hover:scale-120 transition-all duration-200"
+                    className="bg-zinc-100 dark:bg-zinc-700 border dark:border-zinc-600 p-0 md:p-2 rounded-full flex gap-2 hover:scale-110 transition-all duration-200"
                 >
                     <Image
                         width={30}
@@ -264,23 +300,23 @@ const cards = [
         codeLink: 'https://github.com/marsianjohncarter/OlharDevice',
         codeText: 'View Code',
         content: () => {
-          return skillsUsed({
-              skills: [
-                  {
-                      name: 'React',
-                  },
-                  {
-                      name: 'Vite',
-                  },
-                  {
-                      name: 'Tailwind',
-                  },
-                  {
-                      name: 'GitHub',
-                  },
-              ],
-          });
-      },
+            return skillsUsed({
+                skills: [
+                    {
+                        name: 'Python',
+                    },
+                    {
+                        name: 'Qt',
+                    },
+                    {
+                        name: 'GitHub',
+                    },
+                    {
+                        name: 'Git',
+                    },
+                ],
+            });
+        },
     },
     {
         description: 'Personal website created with React, Vite, and Tailwind.',
@@ -299,6 +335,9 @@ const cards = [
                         name: 'React',
                     },
                     {
+                        name: 'NextJs',
+                    },
+                    {
                         name: 'Vite',
                     },
                     {
@@ -306,6 +345,12 @@ const cards = [
                     },
                     {
                         name: 'GitHub',
+                    },
+                    {
+                        name: 'Git',
+                    },
+                    {
+                        name: 'Vercel',
                     },
                 ],
             });
@@ -366,7 +411,7 @@ const cards = [
             });
         },
     },
-        {
+    {
         description:
             'A website for a chess player, created with React, Vite, and Tailwind. The website features a blog, contact page, and about page.',
         info: 'A website for a chess player, created with React, Vite, and Tailwind. The website features a blog, contact page, and about page.',
@@ -418,6 +463,4 @@ const cards = [
             });
         },
     },
-
 ];
-
