@@ -29,9 +29,10 @@ export default function RootLayout({ children }) {
         <html lang="en" suppressHydrationWarning>
             <Script
                 async
+                id="google-analytics-load-script"
                 src="https://www.googletagmanager.com/gtag/js?id=G-NHZ14B3DLH"
             ></Script>
-            <Script>
+            <Script id="google-analytics-script">
                 {`window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
