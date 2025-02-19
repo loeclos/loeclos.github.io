@@ -24,12 +24,6 @@
   --foreground: #171717;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 body {
   color: var(--foreground);
@@ -37,6 +31,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: var(--font-unica-one), sans-serif !important;
+}
 
 .styled-link {
 	color: inherit;

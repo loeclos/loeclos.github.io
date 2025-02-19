@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Almendra_SC, Montserrat, Inter, Grenze_Gotisch, Rubik_Mono_One } from 'next/font/google';
+import { Geist, Geist_Mono, Almendra_SC, Montserrat, Inter, Grenze_Gotisch, Rubik_Mono_One, Merriweather } from 'next/font/google';
 
 export const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -33,6 +33,12 @@ export const grenzeGotisch = Grenze_Gotisch({
 
 export const rubikMonoOne = Rubik_Mono_One({
     variable: '--font-rubik-mono-one',
+    subsets: ['latin'],
+    weight: ['400'],
+});
+
+export const merriweather = Merriweather({
+    variable: '--font-merriweather',
     subsets: ['latin'],
     weight: ['400'],
 });

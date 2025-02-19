@@ -12,7 +12,7 @@ function ThemeProvider({ children }) {
     return <>{children}</>;
   }
   return (
-    <NextThemesProvider attribute="class" defaultTheme="system" enableSystem={true}>
+    <NextThemesProvider attribute="class" defaultTheme="system" enableSystem={true} storageKey="theme">
       {children}
     </NextThemesProvider>
   );

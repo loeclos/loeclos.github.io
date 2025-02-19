@@ -1,6 +1,7 @@
-import TopSection from '@/components/homepage/top-section/top-section.jsx';
-import SkillsSection from '@/components/homepage/skills-section/skills-section';
-import ProjectsSection from '@/components/homepage/projects-section/projects-section';
+import TopSection from '@/homepage/top-section/top-section.jsx';
+import SkillsSection from '@/homepage/skills-section/skills-section';
+import ProjectsSection from '@/homepage/projects-section/projects-section';
+import HobbiesSection from '@/homepage/hobbies-section/hobbies-section';
 import Image from 'next/image';
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
             <TopSection />
             <SkillsSection />
             <ProjectsSection />
+            <HobbiesSection />
         </>
     );
 }

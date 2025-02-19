@@ -51,7 +51,7 @@ export default function TopSection() {
                     </CardFooter>
                 </Card>
 
-                <Card className="backdrop-blur-2xl py-12 ">
+                <Card className="backdrop-blur-2xl py-12 px-8">
                     <p className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 mb-5 cursor-pointer">
                         Socials
                     </p>

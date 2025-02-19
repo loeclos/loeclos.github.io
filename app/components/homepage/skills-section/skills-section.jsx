@@ -1,7 +1,6 @@
 import { HoverEffect } from '@/components/homepage/skills-section/hover-effect';
 import { Card } from '@/ui/card';
 
-
 const skills = [
     {
         title: 'Languages',
@@ -73,7 +72,7 @@ const skills = [
             },
             {
                 name: 'Render',
-                description: 'Easy GUI, Easy to learn.',    
+                description: 'Easy GUI, Easy to learn.',
                 percentage: '95',
                 iconName: 'vercel',
             },
@@ -93,7 +92,7 @@ const skills = [
                 description: '🤯 <em>explosion</em>',
                 percentage: '98',
                 iconName: 'react',
-            },  
+            },
             {
                 name: 'Bootstrap',
                 description: 'A precompiled CSS class library',
@@ -145,7 +144,8 @@ const skills = [
             },
             {
                 name: 'Frontend (React + Tailwind)',
-                description: 'Combine two previous skills and you get a new one!',
+                description:
+                    'Combine two previous skills and you get a new one!',
                 percentage: '95',
                 iconName: 'react',
             },
@@ -170,7 +170,8 @@ const skills = [
             },
             {
                 name: 'Vscode',
-                description: 'Powerful tool. Would like to say something else, but nothing comes to mind.',
+                description:
+                    'Powerful tool. Would like to say something else, but nothing comes to mind.',
                 percentage: '98',
                 iconName: 'vscode',
             },
@@ -178,28 +179,26 @@ const skills = [
     },
 ];
 
-
-
 export default function SkillsSection() {
     return (
-      <div id="skills" className='max-w-[90%] md:max-w-5xl mx-auto px-4'>
-        <div className="text-center px-4 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white">
-            <h1 className="text-5xl font-bold my-10">Skills</h1>
-            <p className="mb-10 italic opacity-55 text-sm">
-                Things I've learned throughout the years.
-            </p>
-            {skills.map((skill) => (
-                <Card
-                    key={skill.title}
-                    className={
-                        'backdrop-blur-2xl my-15 border border-zinc-200 dark:border-zinc-700'
-                    }
-                >
-                    <h1 className="text-2xl font-bold">{skill.title}</h1>
-                    <HoverEffect items={skill.items} />
-                </Card>
-            ))}
-        </div>
+        <div id="skills" className="max-w-[90%] md:max-w-5xl mx-auto px-4">
+            <div className="text-center px-2 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white">
+                <h1 className="text-5xl font-bold my-10">Skills</h1>
+                <p className="mb-10 italic opacity-55 text-sm">
+                    Things I've learned throughout the years.
+                </p>
+                {skills.map((skill) => (
+                    <Card
+                        key={skill.title}
+                        className={
+                            'backdrop-blur-2xl my-15 border border-zinc-200 dark:border-zinc-700'
+                        }
+                    >
+                        <h1 className="text-2xl font-bold">{skill.title}</h1>
+                        <HoverEffect items={skill.items} />
+                    </Card>
+                ))}
+            </div>
         </div>
     );
 }
