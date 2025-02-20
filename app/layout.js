@@ -1,9 +1,6 @@
 import {
-    geistSans,
     geistMono,
-    almendraSc,
-    montserrat,
-    grenzeGotisch,
+    spaceGrotesk,
 } from '@/ui/lib/fonts';
 import Script from 'next/script';
 import Navbar from '@/components/navbar/navbar';
@@ -39,7 +36,7 @@ export default function RootLayout({ children }) {
                 gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`}
             </Script>
             <body
-                className={`${geistMono.className} antialiased transition-all delay-150 duration-300 `}
+                className={`${spaceGrotesk.className} antialiased transition-all delay-150 duration-300 `}
             >
                 <ThemeProvider
                     attribute="class"

@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Almendra_SC, Montserrat, Inter, Grenze_Gotisch, Rubik_Mono_One, Merriweather } from 'next/font/google';
+import { Geist, Geist_Mono, Almendra_SC, Montserrat, Inter, Grenze_Gotisch, Rubik_Mono_One, Merriweather, Space_Grotesk } from 'next/font/google';
 
 export const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -41,4 +41,9 @@ export const merriweather = Merriweather({
     variable: '--font-merriweather',
     subsets: ['latin'],
     weight: ['400'],
+});
+
+export const spaceGrotesk = Space_Grotesk({
+    variable: '--font-space-grotesk',
+    subsets: ['latin'],
 });
