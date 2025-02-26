@@ -10,9 +10,9 @@ import ThemeProvider from '@/ui/theme/theme-provider';
 import './globals.css';
 
 export const metadata = {
-    title: 'marsianjohncarter',
+    title: 'valdemirum',
     description:
-        'marsianjohncarter portfolio website | John Carter | Web Developer | React Developer | The asteroid of programming | Can be found on reddit, github, discord, and many other places. ',
+        'valdemirum portfolio website | John Carter | Web Developer | React Developer | The asteroid of programming | Can be found on reddit, github, discord, and many other places. ',
 };
 
 const links = [
