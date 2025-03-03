@@ -20,7 +20,7 @@ export default function TopSection() {
             <Card className="py-12 px-8 flex flex-col justify-center backdrop-blur-2xl">
                 <h1 className="text-4xl font-bold mb-2">Hello!</h1>
                 <p className="text-lg mb-8">
-                    My name is john and I'm a Frontend | Flask Backend | Machine
+                    My name is gleb and I'm a Frontend | Flask Backend | Machine
                     Learning developer
                 </p>
                 <Button
@@ -63,7 +63,7 @@ export default function TopSection() {
                     </p>
                     <CardFooter className={'mx-auto text-center bottom-0'}>
                         <Link
-                            href={'https://github.com/marsianjohncarter'}
+                            href={'https://github.com/valdemirum'}
                             target={'_blank'}
                         >
                             <Button variant="amber">

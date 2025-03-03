@@ -88,7 +88,7 @@ export default function ProjectSection() {
 
                                     <div className="grid grid-rows-3 min-h-0 gap-6 py-10 px-15">
                                         <div
-                                            className={`grid gap-4 mb-5 ${
+                                            className={`grid gap-4 mb-10 ${
                                                 active.ctaText === 'View Code'
                                                     ? 'grid-cols-1'
                                                     : 'grid-cols-1 md:grid-cols-2'
@@ -124,7 +124,7 @@ export default function ProjectSection() {
                                         </div>
 
                                         <div className="overflow-y-auto h-full row-span-2 scrollbar-hidden">
-                                            <div className="px-4 pb-10">
+                                            <div className="px-4 my-10 pb-10">
                                                 <motion.h3
                                                     layoutId={`title-${active.title}-${id}`}
                                                     className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
@@ -238,6 +238,8 @@ const skillIcons = {
     Git: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
     GitHub: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
     Vite: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg',
+    CSS3: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
+    Typescript: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
     Firebase:
         'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
     Vercel: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg',
@@ -297,7 +299,7 @@ const cards = [
         src: '/img/project-image-OLHAR.png',
         ctaText: 'Visit',
         ctaLink: 'https://olhar.media/',
-        codeLink: 'https://github.com/marsianjohncarter/OlharDevice',
+        codeLink: 'https://github.com/valdemirum/OlharDevice',
         codeText: 'View Code',
         content: () => {
             return skillsUsed({
@@ -326,7 +328,7 @@ const cards = [
         ctaText: 'Visit',
         ctaLink: '/',
         codeLink:
-            'https://github.com/marsianjohncarter/marsianjohncarter.github.io',
+            'https://github.com/valdemirum/valdemirum.github.io',
         codeText: 'View Code',
         content: () => {
             return skillsUsed({
@@ -364,7 +366,7 @@ const cards = [
         src: '/img/project-image-GABC.png',
         ctaText: 'Visit',
         ctaLink: 'https://gabc-media-team.web.app/',
-        codeLink: 'https://github.com/marsianjohncarter/gabc-media-team',
+        codeLink: 'https://github.com/valdemirum/gabc-media-team',
         codeText: 'View Code',
         content: () => {
             return skillsUsed({
@@ -392,8 +394,8 @@ const cards = [
         title: 'React + Vite + Tailwind Website',
         src: '/img/not-available.png',
         ctaText: 'View Code',
-        ctaLink: 'https://github.com/marsianjohncarter/github-react-example',
-        codeLink: 'https://github.com/marsianjohncarter/github-react-example',
+        ctaLink: 'https://github.com/valdemirum/github-react-example',
+        codeLink: 'https://github.com/valdemirum/github-react-example',
         codeText: 'View Code',
         content: () => {
             return skillsUsed({
@@ -419,7 +421,7 @@ const cards = [
         src: '/img/project-image-CHESS.png',
         ctaText: 'Visit',
         ctaLink: 'https://chess-website-completed.onrender.com/',
-        codeLink: 'https://github.com/marsianjohncarter/chess-website',
+        codeLink: 'https://github.com/valdemirum/chess-website',
         codeText: 'View Code',
         content: () => {
             return skillsUsed({
@@ -442,7 +444,7 @@ const cards = [
         src: '/img/project-image-NUTRIFY.png',
         ctaText: 'Visit',
         ctaLink: 'https://nutrify-preview.web.app/',
-        codeLink: 'https://github.com/marsianjohncarter/nutrify-website',
+        codeLink: 'https://github.com/valdemirum/nutrify-website',
         codeText: 'View Code',
         content: () => {
             return skillsUsed({
@@ -458,6 +460,35 @@ const cards = [
                     },
                     {
                         name: 'Firebase',
+                    },
+                ],
+            });
+        },
+    },
+    {
+        description:
+            'A minimal portfolio template for developers',
+        info: 'A minimal portfolio template for developers',
+        title: ' Minifolio ⚡',
+        src: '/img/project-image-MINIFOLIO.png',
+        ctaText: 'Visit',
+        ctaLink: 'https://minifolio-snowy.vercel.app/',
+        codeLink: 'https://github.com/valdemirum/Minifolio',
+        codeText: 'View Code',
+        content: () => {
+            return skillsUsed({
+                skills: [
+                    {
+                        name: 'React',
+                    },
+                    {
+                        name: 'NextJs',
+                    },
+                    {
+                        name: 'CSS3',
+                    },
+                    {
+                        name: 'Typescript',
                     },
                 ],
             });

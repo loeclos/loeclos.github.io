@@ -12,7 +12,7 @@ import './globals.css';
 export const metadata = {
     title: 'valdemirum',
     description:
-        'valdemirum portfolio website | John Carter | Web Developer | React Developer | The asteroid of programming | Can be found on reddit, github, discord, and many other places. ',
+        'valdemirum portfolio website | Gleb Zhukov | Web Developer | React Developer | The asteroid of programming | Can be found on reddit, github, discord, and many other places. ',
 };
 
 const links = [
