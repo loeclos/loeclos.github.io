@@ -304,20 +304,20 @@ export default function GitHubOverview() {
                 color: 'rgb(255, 255, 255)',
                 width: '971px',
                 height: '447px',
-                'box-shadow':
+                'boxShadow':
                     '22.35px 22.35px 25px 2px color-mix(in srgb, var(--t-shadow) 20%, transparent),             22.35px 22.35px 50px 5px color-mix(in srgb, var(--t-shadow) 25%, transparent),             22.35px 22.35px 100px 10px color-mix(in srgb, var(--t-shadow) 30%, transparent),             22.35px 22.35px 250px 30px color-mix(in srgb, var(--t-shadow) 40%, transparent)',
-                'border-radius': '22px',
+                'borderRadius': '22px',
                 '--t-shadow': 'rgba(0, 0, 0, 0.5)',
-                '-webkit-transition':
-                    'box-shadow 0.3s var(--spring-easing), border-radius 0.3s var(--spring-easing)',
+                'WebkitTransition':
+                    'boxShadow 0.3s var(--spring-easing), border-radius 0.3s var(--spring-easing)',
                 transition:
-                    'box-shadow 0.3s var(--spring-easing), border-radius 0.3s var(--spring-easing)',
+                    'boxShadow 0.3s var(--spring-easing), border-radius 0.3s var(--spring-easing)',
             }}
         >
             <div
                 className="pointer-events-none absolute inset-0 size-full"
                 style={{
-                    '-webkit-transition':
+                    'WebkitTransition':
                         'filter 0.3s var(--spring-easing), transform 0.3s var(--spring-easing)',
                     transition:
                         'filter 0.3s var(--spring-easing), transform 0.3s var(--spring-easing)',
@@ -327,7 +327,7 @@ export default function GitHubOverview() {
                     className="size-full"
                     style={{
                         background: 'rgba(16, 4, 4, 0.84)',
-                        '-webkit-transition':
+                        'WebkitTransition':
                             'background 0.3s var(--spring-easing)',
                         transition: 'background 0.3s var(--spring-easing)',
                     }}
@@ -336,13 +336,13 @@ export default function GitHubOverview() {
             <div
                 className="relative flex size-full flex-col overflow-hidden"
                 style={{
-                    'border-color': 'rgba(143, 143, 143, 0.6)',
-                    'border-style': 'double',
-                    'border-radius': '22px',
-                    '-webkit-transition':
+                    'borderColor': 'rgba(143, 143, 143, 0.6)',
+                    'borderStyle': 'double',
+                    'borderRadius': '22px',
+                    'WebkitTransition':
                         'border-radius 0.3s var(--spring-easing)',
                     transition: 'border-radius 0.3s var(--spring-easing)',
-                    'border-width': '3px',
+                    'borderWidth': '3px',
                 }}
             >
                 <div className="h-[50px] w-full shrink-0 border-b border-b-transparent px-[18px]  flex items-center gap-[8px]">
@@ -350,7 +350,7 @@ export default function GitHubOverview() {
                         <div
                             className="size-[13px] rounded-full "
                             style={{
-                                'background-color': 'red',
+                                'backgroundColor': 'red',
 
                             }}
                         />
@@ -361,7 +361,7 @@ export default function GitHubOverview() {
                         <div
                             className="size-[13px] rounded-full"
                             style={{
-                                'background-color': 'green',
+                                'backgroundColor': 'green',
                             }}
                         />
                     </div>

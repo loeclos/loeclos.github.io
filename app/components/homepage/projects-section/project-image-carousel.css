@@ -1,0 +1,103 @@
+.embla {
+    max-width: 48rem;
+    margin: auto;
+    position: relative;
+    --slide-height: 19rem;
+    --slide-spacing: 1rem;
+    --slide-size: 100%;
+    padding: 1rem 0;
+}
+
+/* Viewport */
+.embla__viewport {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+/* Container */
+.embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+}
+
+/* Slides */
+.embla__slide {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* Navigation buttons */
+.embla__buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.embla__button {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.embla__button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.embla__button svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: white;
+}
+
+/* Pagination dots */
+.embla__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.embla__dots {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.embla__dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.embla__dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.embla__dot--selected {
+    background-color: white;
+    width: 0.8rem;
+    height: 0.8rem;
+}
