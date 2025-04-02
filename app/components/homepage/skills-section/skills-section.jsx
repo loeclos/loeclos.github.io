@@ -182,7 +182,7 @@ const skills = [
 export default function SkillsSection() {
     return (
         <div id="skills" className="max-w-[90%] md:max-w-5xl mx-auto px-4">
-            <div className="text-center px-2 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white">
+            <div className="text-center px-2 md:px-8 py-4 my-15 rounded-4xl border border-zinc-200 dark:border-zinc-800 dark:text-white">
                 <h1 className="text-5xl font-bold my-10">Skills</h1>
                 <p className="mb-10 italic opacity-55 text-sm">
                     Things I've learned throughout the years.
@@ -191,7 +191,7 @@ export default function SkillsSection() {
                     <Card
                         key={skill.title}
                         className={
-                            'backdrop-blur-2xl my-15 border border-zinc-200 dark:border-zinc-700'
+                            'backdrop-blur-2xl my-15 border-t-0 border-b-0 border-r-2 border-l-2 border-zinc-300  dark:border-zinc-700'
                         }
                     >
                         <h1 className="text-2xl font-bold">{skill.title}</h1>

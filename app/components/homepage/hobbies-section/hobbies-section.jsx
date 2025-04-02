@@ -66,14 +66,14 @@ const books = [
 
 export default function HobbiesSection() {
     return (
-        <div id="hobbies" className="max-w-[90%] md:max-w-5xl mx-auto px-4">
-            <div className="text-center px-4 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white">
+        <div id="hobbies" className="max-w-[90%] md:max-w-5xl mx-auto px-4 dark:text-white">
+            <div className="text-center px-4 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-800">
                 <h1 className="text-5xl font-bold my-10">Hobbies</h1>
                 <p className="mb-10 italic opacity-55 text-sm">
                     Things I enjoy doing in my free time to stop myself from
                     dying of boredom.
                 </p>
-                <div className="text-center px-4 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white">
+                <div className="text-center px-4 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-800">
                     <h3 className="text-2xl font-bold">1. Suno</h3>
                     <p className="mb-10 opacity-70 text-sm px-5 md:px-20">
                         Suno is an AI music creation software. Very fun to play
@@ -90,7 +90,7 @@ export default function HobbiesSection() {
                         />
                     ))}
                 </div>
-                <div className="text-center px-4 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white">
+                <div className="text-center px-4 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-800">
                     <h3 className="text-2xl font-bold">2. Reading</h3>
                     <p className="mb-10 opacity-70 text-sm px-5 md:px-20">
                         I love reading books. Here are some of my favorites:

@@ -1,7 +1,4 @@
-import {
-    geistMono,
-    spaceGrotesk,
-} from '@/ui/lib/fonts';
+import { dmMono } from '@/ui/lib/fonts';
 import Script from 'next/script';
 import Navbar from '@/components/navbar/navbar';
 import Footer from '@/components/footer/footer';
@@ -36,7 +33,7 @@ export default function RootLayout({ children }) {
                 gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`}
             </Script>
             <body
-                className={`${spaceGrotesk.className} antialiased transition-all delay-150 duration-300 `}
+                className={`${dmMono.className} antialiased transition-all delay-150 duration-300 `}
             >
                 <ThemeProvider
                     attribute="class"

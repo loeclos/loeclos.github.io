@@ -36,7 +36,7 @@ export default function ProjectSection() {
                 id="projects"
                 className="max-w-[90%] md:max-w-5xl mx-auto px-4 dark:text-white"
             >
-                <div className="text-center px-8 py-4 my-15 rounded-3xl border border-zinc-100 dark:border-zinc-700 dark:bg-zinc-900">
+                <div className="text-center px-8 py-4 my-15 rounded-4xl border border-zinc-200 dark:border-zinc-800">
                     <h1 className="text-5xl font-bold my-10">Projects</h1>
                     <p className="mb-10 italic opacity-55 text-sm">
                         Things I've created throughout the years.

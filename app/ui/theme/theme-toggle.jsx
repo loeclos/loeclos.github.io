@@ -2,7 +2,6 @@
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';
-import Button from '@/ui/button';
 
 function ThemeToggle({ className }) {
     const { theme, setTheme } = useTheme();
@@ -18,7 +17,7 @@ function ThemeToggle({ className }) {
 
     return (
         <button
-            className={`inline-flex h-12 w-full md:w-12 items-center justify-center rounded-2xl ${theme === 'light' ? 'bg-zinc-600/35' : 'bg-zinc-700/35'} px-3 font-medium text-neutral-50 transition active:scale-110 ${className}`}
+            className={`inline-flex cursor-pointer h-12 w-full md:w-12 items-center justify-center rounded-2xl ${theme === 'light' ? 'bg-zinc-600/35' : 'bg-zinc-700/35'} px-3 font-medium text-neutral-50 transition active:scale-110 ${className}`}
             onClick={() => {
                 setTheme(theme === 'light' ? 'dark' : 'light');
                 console.log(theme);

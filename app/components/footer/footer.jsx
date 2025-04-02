@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer() {
     return (
-        <footer className="bg-white dark:bg-zinc-900 mt-30">
+        <footer className="bg-white dark:bg-zinc-900/30 mt-30">
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
@@ -11,7 +11,7 @@ export default function Footer() {
                             className="flex items-center"
                         >
                             <Image
-                                src="/img/avatar.png"
+                                src="/img/avatar.jpeg"
                                 width={60}
                                 height={60}
                                 alt=" Logo"
