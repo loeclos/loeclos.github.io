@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
                 gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`}
             </Script>
             <body
-                className={`${dmMono.className} antialiased transition-all delay-150 duration-300 `}
+                className={`${dmMono.className} antialiased transition-all delay-150 duration-300`}
             >
                 <ThemeProvider
                     attribute="class"
@@ -43,7 +43,10 @@ export default function RootLayout({ children }) {
                     <div className="fixed top-0 z-[-2] h-screen w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] hidden dark:block"></div>
                     <div className="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)] block dark:hidden"></div>
                     <Navbar links={links} />
-                    {children}
+                    <main>
+                        {children}
+
+                    </main>
                     <Footer />
                 </ThemeProvider>
             </body>

@@ -1,5 +1,3 @@
-
-
 import AudioPlayer from '@/components/audio-player/audio-player';
 import BookItem from '@/components/book-item/book-item';
 import { merriweather } from '@/ui/lib/fonts';

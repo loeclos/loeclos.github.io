@@ -161,7 +161,7 @@ export default function ProjectSection() {
                                 layoutId={`card-${card.title}-${id}`}
                                 key={card.title}
                                 onClick={() => setActive(card)}
-                                className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-3xl cursor-pointer transition-colors duration-300"
+                                className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-4xl cursor-pointer transition-colors duration-300"
                             >
                                 <div className="flex gap-4 flex-col w-full">
                                     <motion.div
@@ -170,7 +170,7 @@ export default function ProjectSection() {
                                         <Image
                                             src={card.src}
                                             width={0}
-                                            height={0}
+                                            height={0} 
                                             sizes="100vw"
                                             alt={card.title}
                                             className="h-60 w-full rounded-3xl object-cover aspect-video bg-gray-200 border border-zinc-200 dark:border-zinc-700"
