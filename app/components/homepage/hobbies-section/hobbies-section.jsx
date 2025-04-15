@@ -4,10 +4,10 @@ import { merriweather } from '@/ui/lib/fonts';
 
 const sunoSongs = [
     {
-        title: 'Fantasy Tavern',
+        title: "Let's run away.",
         audioUrl:
-            'https://cdn1.suno.ai/46c8467e-9331-461b-b15c-e58ee2f1e7ef.mp3',
-        shareUrl: 'https://suno.com/song/46c8467e-9331-461b-b15c-e58ee2f1e7ef',
+            'https://cdn1.suno.ai/3213b806-8c36-423c-ab49-f5dd8e0473c4.mp3',
+        shareUrl: 'https://suno.com/song/3213b806-8c36-423c-ab49-f5dd8e0473c4',
     },
     {
         title: 'Toyota Pruis',
@@ -62,9 +62,12 @@ const books = [
 ];
 
 
-export default function HobbiesSection() {
+export default async function HobbiesSection() {
     return (
-        <div id="hobbies" className="max-w-[90%] md:max-w-5xl mx-auto px-4 dark:text-white">
+        <div
+            id="hobbies"
+            className="max-w-[90%] md:max-w-5xl mx-auto px-4 dark:text-white"
+        >
             <div className="text-center px-4 md:px-8 py-4 my-15 rounded-3xl border border-zinc-200 dark:border-zinc-800">
                 <h1 className="text-5xl font-bold my-10">Hobbies</h1>
                 <p className="mb-10 italic opacity-55 text-sm">

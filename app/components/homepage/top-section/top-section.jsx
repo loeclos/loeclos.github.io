@@ -17,7 +17,7 @@ function scrollToSection(sectionId) {
 export default function TopSection() {
     return (
         <div className="grid grid-rows-1 md:grid-rows-2 gap-4 max-w-[90%] md:max-w-5xl mx-auto pt-45 md:pt-32 px-4">
-            <Card className="py-12 px-8 flex flex-col justify-center backdrop-blur-2xl  rounded-4xl">
+            <Card className="py-12 px-8 flex flex-col justify-center backdrop-blur-2xl rounded-4xl">
                 <h1 className="text-4xl font-bold mb-2">Hello!</h1>
                 <p className="text-lg mb-8">
                     My name is gleb and I'm a Frontend | Flask Backend | Machine

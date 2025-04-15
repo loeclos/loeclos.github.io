@@ -145,8 +145,7 @@ const ProjectImageCarousel = (props) => {
                 <div className="embla__container">
                     {slides.map((image) => (
                         <div className="embla__slide flex justify-center items-center" key={`embla-image-${image.alt}`}>
-                            <Image className='rounded-3xl' src={image.src} alt={image.alt} width={600} height={500}  />
-
+                            <Image className='rounded-3xl' src={image.src} alt={image.alt} width={600} height={500} priority />
                         </div>
                     ))}
                 </div>

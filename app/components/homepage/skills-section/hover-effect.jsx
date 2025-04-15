@@ -68,7 +68,7 @@ export const HoverEffect = ({ items, className }) => {
                                 </HoverCardContent>
                             </HoverCardTrigger>
                         </HoverCard>
-                        <CardBar percentage={item.percentage} />
+                        {/* <CardBar percentage={item.percentage} /> */}
                     </Card>
                 </div>
             ))}

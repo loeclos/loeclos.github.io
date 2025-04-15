@@ -19,6 +19,7 @@ const links = [
 ];
 
 export default function RootLayout({ children }) {
+    
     return (
         <html lang="en" suppressHydrationWarning>
             <Script
@@ -45,7 +46,6 @@ export default function RootLayout({ children }) {
                     <Navbar links={links} />
                     <main>
                         {children}
-
                     </main>
                     <Footer />
                 </ThemeProvider>
