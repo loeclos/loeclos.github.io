@@ -45,7 +45,7 @@ export default function AudioPlayer({ audioUrl, title, shareUrl, className }) {
     };
 
     return (
-        <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 px-10 py-5 items-center h-fit bg-white bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 dark:bg-gradient-to-br dark:from-blue-950 dark:via-cyan-950 dark:to-zinc-900 rounded-2xl ${className}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 px-10 py-5 items-center h-fit bg-white bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 dark:bg-gradient-to-br dark:from-blue-950 dark:via-cyan-950 dark:to-zinc-900 rounded-2xl ${className} hover:scale-105 transition-transform duration-200 cursor-pointer`}>
             <div className="flex gap-4 items-center">
                 <button
                     id={`play-audio-${title}`}
@@ -66,7 +66,7 @@ export default function AudioPlayer({ audioUrl, title, shareUrl, className }) {
                 href={shareUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex gap-4 items-center"
+                className="flex gap-4 items-center underline hover:text-cyan-600"
             >
                 <ExternalLink className="flex items-center h-5 w-5" />
                 <span>Open in suno</span>

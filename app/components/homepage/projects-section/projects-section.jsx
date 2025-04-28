@@ -173,6 +173,7 @@ export default function ProjectSection() {
                                             height={0} 
                                             sizes="100vw"
                                             alt={card.title}
+                                            priority={true}
                                             className="h-60 w-full rounded-3xl object-cover aspect-video bg-gray-200 border border-zinc-200 dark:border-zinc-700"
                                         />
                                     </motion.div>
