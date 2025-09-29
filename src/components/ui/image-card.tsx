@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils"; // Assuming a 'cn' utility from shadcn/ui
-import { Heart } from "lucide-react";
+import Image from 'next/image';
 
 //==- Shadcn UI Utility (for merging classes) -==//
 // You can get this from the shadcn/ui documentation.
@@ -53,7 +53,7 @@ const ImageCard = React.forwardRef<
         {...props}
       >
         {/* Background Image with Hover Animation */}
-        <img
+        <Image
           src={imageUrl}
           alt={title}
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"

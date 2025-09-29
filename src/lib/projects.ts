@@ -1,12 +1,5 @@
-'use client';
-
-import { useState, useCallback } from 'react';
 import { Project } from '@/types/projects';
 
-export type ProcessState = 'error' | 'loading' | 'success';
-
-export default function GetProjects() {
-    const [process, setProcess] = useState<ProcessState>('loading');
     const projects: Project[] = [
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180b8325662b',
@@ -213,56 +206,12 @@ export default function GetProjects() {
         },
     ];
 
-    const request = useCallback(() => {
-        setProcess('success');
-        return projects;
-    }, []);
+// server-safe function to fetch all projects
+export async function getAllProjects(): Promise<Project[]> {
+  return projects; // or fetch from API/db
+}
 
-    const clearError = useCallback(() => {
-        setProcess('loading');
-    }, []);
-
-    const getByID = (id: string) => {
-        return projects.find((project) => project.id === id);
-    };
-
-    const filterProjects = (query: string) => {
-        setProcess('loading');
-        if (!query) {
-            return projects;
-        }
-        const lowerQuery = query.toLowerCase();
-        const filtered = projects.filter((project) => {
-            const inTitle = project.title.toLowerCase().includes(lowerQuery);
-            const inDescription = project.description
-                .toLowerCase()
-                .includes(lowerQuery);
-            const inSkills = project.skills.some((skill) =>
-                skill.toLowerCase().includes(lowerQuery)
-            );
-            const inType = project.projectType
-                .toLowerCase()
-                .includes(lowerQuery);
-
-            return inTitle || inDescription || inSkills || inType;
-        });
-        setProcess('success');
-        return filtered;
-    };
-
-    const getAll = () => {
-        setProcess('loading');
-        setProcess('success');
-        return projects;
-    }
-
-    return {
-        request,
-        clearError,
-        process,
-        setProcess,
-        filterProjects,
-        getAll,
-        getByID,
-    };
+// server-safe function to fetch one project by ID
+export async function getProjectByID(id: string): Promise<Project | null> {
+  return projects.find((p) => p.id === id) ?? null;
 }

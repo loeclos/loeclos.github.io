@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 type ProcessState = 'error' | 'loading' | 'success';
 
-export default function getPosts() {
+export default function GetPosts() {
     const [process, setProcess] = useState<ProcessState>('loading');
 
     const request = useCallback(async () => {
@@ -21,15 +21,16 @@ export default function getPosts() {
             const data = await response.json(); // Or .text(), .blob(), etc.
             setProcess('success'); 
             return data;
-        } catch (error: any) {
+        } catch (error) {
             setProcess('error'); 
             throw error;
         }
-    }, [process]);
+    }, []);
+
 
     const clearError = useCallback(() => {
         setProcess('loading'); 
-    }, [process]);
+    }, []);
 
 
     return { 

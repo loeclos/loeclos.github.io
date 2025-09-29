@@ -23,12 +23,15 @@ export default function Hero() {
                             Hello!
                         </CardHeader>
                         <CardContent className="text-lg font-plex-mono">
-                            My name is Gleb and I'm a agile developer
+                            My name is Gleb and I&apos;m a agile developer
                         </CardContent>
                         <CardFooter className="w-full mx-auto text-center">
-                            <BlurredButton className="text-lg font-mono w-full">
+                            
+                                                            <Link className='h-full w-full' href={"#skills"}>
+                                <BlurredButton className="text-lg font-mono w-full">
                                 Jump to my skills {'->'}
                             </BlurredButton>
+                                </Link>
                         </CardFooter>
                     </Card>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

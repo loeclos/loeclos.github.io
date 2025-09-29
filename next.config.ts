@@ -1,11 +1,12 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+    output: 'export',
     images: {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'placehold.co',
+                hostname: 'loeclos.github.io',
                 port: '',
                 pathname: '**',
             },
@@ -22,6 +23,7 @@ const nextConfig: NextConfig = {
                 pathname: '**',
             }
         ],
+        unoptimized: true,
     },
 };
 

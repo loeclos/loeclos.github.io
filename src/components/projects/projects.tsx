@@ -3,29 +3,25 @@
 import ProjectsSkeleton from '@/components/projects/project-search-skeleton';
 import { useEffect, useState } from 'react';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
-import { ImageCard } from '@/components/ui/image-card';
 
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import getProjects from '@/hooks/getProjects';
+import GetProjects from '@/hooks/getProjects';
 import { ProjectsResponse, Project as ProjectProps } from '@/types/projects';
 import SearchError from '@/components/projects/search-error';
 import { ProjectCard } from '@/components/ui/project-card';
-
-import { BlurredButton } from '@/components/ui/blurred-button';
-import Link from 'next/link';
 
 function Project(project: ProjectProps) {
     return <ProjectCard {...project} />;
 }
 
 export default function Projects() {
-    const { request, process, filterProjects } = getProjects();
+    const { request, process, filterProjects } = GetProjects();
     const [projects, setProjects] = useState<ProjectsResponse>([]);
 
     useEffect(() => {
         setProjects(request());
-    }, [process]);
+    }, [projects, process]);
 
     const handleSearch = (query: string) => {
         const filtered = filterProjects(query);

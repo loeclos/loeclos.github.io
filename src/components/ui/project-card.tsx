@@ -5,8 +5,8 @@ import { Project } from '@/types/projects';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export const ProjectCard = ({id, projectType, description, thumbnailUrl, title}: Project) => {
-    const [isHovered, setIsHovered] = useState(false);
+export const ProjectCard = ({id, description, thumbnailUrl, title}: Project) => {
+    // const [isHovered, setIsHovered] = useState(false);
     const [clicked, setClicked] = useState(false);
 
     const handleButtonClick = () => {
@@ -25,8 +25,8 @@ export const ProjectCard = ({id, projectType, description, thumbnailUrl, title}:
             whileHover={{ 
                 scale: 1.01,
             }}
-            onHoverStart={() => setIsHovered(true)}
-            onHoverEnd={() => setIsHovered(false)}
+            // onHoverStart={() => setIsHovered(true)}
+            // onHoverEnd={() => setIsHovered(false)}
         >
             <motion.div 
                 className='flex justify-end p-2 items-center relative z-20'

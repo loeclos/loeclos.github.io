@@ -1,22 +1,27 @@
 'use client';
 import { useEffect, useState } from 'react';
-import getPosts from '@/hooks/getPosts';
+import GetPosts from '@/hooks/getPosts';
 import { Post } from '@/components/posts/post';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 
 type PostType = {
-    items?: any[];
+    guid: string;
+    title: string;
+    categories: string[];
+}
+
+type PostsType = {
+    items?: PostType[];
 };
 
 export default function Posts() {
-    const { request, process } = getPosts();
-    const [data, setData] = useState<PostType>({});
+    const { request } = GetPosts();
+    const [data, setData] = useState<PostsType>({});
 
     useEffect(() => {
         request()
             .then((data_) => {
                 setData(data_);
-                console.log(data);
             })
             .catch(() => {});
     }, [request]);
@@ -36,7 +41,7 @@ export default function Posts() {
 
                         <CardContent className="text-md px-2 ">
                             <div className="flex flex-col gap-3 mt-10">
-                                {data?.items?.map((item) => (
+                                {data?.items?.slice(0, 5).map((item) => (
                                     <Post key={item.guid} {...item} />
                                 ))}
                             </div>

@@ -48,7 +48,7 @@ export default function Skills() {
             className="w-full h-full flex flex-col justify-center items-center px-5 xl:px-96"
             id="skills"
         >
-            <h1 className="text-4xl font-mono mb-8 text-white text-center">Things I've worked with</h1>
+            <h1 className="text-4xl font-mono mb-8 text-white text-center">Things I&apos;ve worked with</h1>
             <div className="w-full h-full flex flex-row flex-wrap gap-4 justify-center items-center">
                 {skills.map((skill) => (
                     <Tooltip key={skill.name}>

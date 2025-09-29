@@ -1,9 +1,11 @@
+'use client';
+
 import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import useEmblaCarousel  from 'embla-carousel-react';
 import {type EmblaOptionsType} from 'embla-carousel';
 import {type EmblaCarouselType} from 'embla-carousel';
-import './test-carousel.css'
+import './project-image-carousel.css'
 
 interface UsePrevNextButtonsReturn {
   prevBtnDisabled: boolean;
@@ -48,7 +50,7 @@ const usePrevNextButtons = (emblaApi: EmblaCarouselType | undefined): UsePrevNex
 
 interface ButtonProps {
   children?: React.ReactNode;
-  [key: string]: any;
+  [key: string]: string | number | boolean | (() => void) | React.ReactNode ;
 }
 
 const PrevButton: React.FC<ButtonProps> = ({ children, ...restProps }) => {

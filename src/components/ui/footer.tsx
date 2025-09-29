@@ -90,7 +90,7 @@ const Footer = ({
                     width={30}
                     height={30}
                     title={logo.title}
-                    className='h-full w-full rounded-xl'
+                    className='h-20 w-full rounded-3xl'
                   />
                 </a>
                 <p className="text-xl font-semibold text-red-200">{logo.title}</p>
