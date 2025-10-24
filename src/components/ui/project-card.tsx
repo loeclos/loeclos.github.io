@@ -86,12 +86,13 @@ export const ProjectCard = ({id, description, thumbnailUrl, title}: Project) => 
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.7, duration: 0.8 }}
                 >
-
                     <motion.div 
                         className="relative z-10 p-2"
                         whileHover={{ scale: 1.03 }}
                         transition={{ ease: "easeInOut" }}
                     >
+                    <Link href={`/projects/${id}`}>
+
                         <Image 
                             src={`${thumbnailUrl}`}
                             alt="Project image" 
@@ -99,6 +100,8 @@ export const ProjectCard = ({id, description, thumbnailUrl, title}: Project) => 
                             width={500}
                             height={300}
                         />
+                    </Link>
+
                     </motion.div>
                 </motion.div>
                 <motion.div 

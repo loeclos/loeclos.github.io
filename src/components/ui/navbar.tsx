@@ -5,11 +5,13 @@ import Link from 'next/link';
 import {
     Drawer,
     DrawerClose,
+    DrawerTitle,
     DrawerContent,
     DrawerFooter,
     DrawerTrigger,
 } from '@/components/ui/drawer';
 import { Menu } from 'lucide-react';
+import { BlurredButton } from './blurred-button';
 
 interface NavbarLink {
     id: string;
@@ -94,23 +96,17 @@ const Navbar = ({ links }: { links: NavbarLink[] }) => {
                             <Menu />
                         </DrawerTrigger>
                         <DrawerContent className="bg-zinc-950 border-none">
+                            <DrawerTitle>Links</DrawerTitle>
                             <DrawerFooter>
                                 {links.map((link) => (
                                     <DrawerClose key={link.id} asChild>
-                                        <Link
-                                            
-                                            href={link.url}
-                                            className="relative text-white px-3 py-2 rounded-md text-md font-sans font-bold transition-all duration-200 z-10"
-                                            onMouseEnter={(e) =>
-                                                handleHover(e, link)
-                                            }
-                                            onMouseLeave={() =>
-                                                setHoveredLink(null)
-                                            }
-                                        >
-                                            {link.text}
-                                        </Link>
-                                    </DrawerClose>
+                  
+                                                                        <a key={link.id} className='h-full w-full' href={link.url}>
+                                <BlurredButton className="text-lg font-mono w-full">
+                                    {'--'} {link.text} {'--'}
+                                </BlurredButton>
+                                </a>
+                                     </DrawerClose> 
                                 ))}
                             </DrawerFooter>
                         </DrawerContent>
