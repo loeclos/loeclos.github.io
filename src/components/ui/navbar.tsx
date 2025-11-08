@@ -2,16 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import {
-    Drawer,
-    DrawerClose,
-    DrawerTitle,
-    DrawerContent,
-    DrawerFooter,
-    DrawerTrigger,
-} from '@/components/ui/drawer';
-import { Menu } from 'lucide-react';
-import { BlurredButton } from './blurred-button';
+
 
 interface NavbarLink {
     id: string;
@@ -61,7 +52,7 @@ const Navbar = ({ links }: { links: NavbarLink[] }) => {
                 }`}
             >
                 {/* <div className="hidden relative md:grid grid-rows-2 md:grid-rows-1 md:grid-cols-2"> */}
-                <div className="hidden relative md:block">
+                <div className="relative">
                     <div className="relative text-center py-4 px-3">
                         {/* Hover background effect */}
                         <div
@@ -72,7 +63,6 @@ const Navbar = ({ links }: { links: NavbarLink[] }) => {
                                 opacity: hoveredLink ? 1 : 0,
                             }}
                         />
-
                         {/* Links */}
                         {links.map((link) => (
                             <Link
@@ -86,31 +76,6 @@ const Navbar = ({ links }: { links: NavbarLink[] }) => {
                             </Link>
                         ))}
                     </div>
-                    {/* <div className="flex justify-center md:justify-end gap-2 py-2 px-4">
-                        
-                    </div> */}
-                </div>
-                <div className="p-2 block md:hidden">
-                    <Drawer>
-                        <DrawerTrigger className="flex justify-center items-center z-50 border-2 bg-zinc-950 border-zinc-900 w-full h-full p-1 rounded-lg">
-                            <Menu />
-                        </DrawerTrigger>
-                        <DrawerContent className="bg-zinc-950 border-none">
-                            <DrawerTitle>Links</DrawerTitle>
-                            <DrawerFooter>
-                                {links.map((link) => (
-                                    <DrawerClose key={link.id} asChild>
-                  
-                                                                        <a key={link.id} className='h-full w-full' href={link.url}>
-                                <BlurredButton className="text-lg font-mono w-full">
-                                    {'--'} {link.text} {'--'}
-                                </BlurredButton>
-                                </a>
-                                     </DrawerClose> 
-                                ))}
-                            </DrawerFooter>
-                        </DrawerContent>
-                    </Drawer>
                 </div>
             </div>
         </nav>

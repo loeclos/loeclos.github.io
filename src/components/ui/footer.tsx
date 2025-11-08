@@ -31,7 +31,7 @@ const Footer = ({
     title: "Gleb Zhukov",
     url: "https://github.com/loeclos",
   },
-  tagline = "Agile Developer",
+  tagline = "junior dev",
   menuItems = [
     {
       title: "Navigation",

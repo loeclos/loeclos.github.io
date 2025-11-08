@@ -10,7 +10,10 @@ import { Component } from '@/components/raycast-animated-background';
 
 export default function Hero() {
     return (
-        <section id="home" className="relative min-h-screen w-full font-mono bg-black z-0">
+        <section
+            id="home"
+            className="relative min-h-screen w-full font-mono bg-black z-0"
+        >
             {/* Background Component */}
             <div className="absolute inset-0 z-1">
                 <Component />
@@ -26,15 +29,14 @@ export default function Hero() {
                             My name is Gleb and I&apos;m a agile developer
                         </CardContent>
                         <CardFooter className="w-full mx-auto text-center">
-                            
-                                                            <Link className='h-full w-full' href={"#skills"}>
+                            <Link className="h-full w-full" href={'#skills'}>
                                 <BlurredButton className="text-lg font-mono w-full">
-                                Jump to my skills {'->'}
-                            </BlurredButton>
-                                </Link>
+                                    Jump to my skills {'->'}
+                                </BlurredButton>
+                            </Link>
                         </CardFooter>
                     </Card>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-20 md:pb-0">
                         <Card className="py-12 px-3 lg:px-15 flex flex-col justify-center rounded-4xl md:rounded-5xl text-white bg-black/20 backdrop-blur-3xl border-zinc-950">
                             <p className="inline-flex items-center justify-center rounded-md bg-yellow-400/10 mx-5 px-2 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20 text-center mb-5 cursor-pointer">
                                 Code
@@ -42,16 +44,19 @@ export default function Hero() {
                             <CardHeader className="text-2xl font-mono">
                                 Featured Works
                             </CardHeader>
-                            <CardContent className='font-plex-mono'>
+                            <CardContent className="font-plex-mono">
                                 Explore the code, learn about the technologies
                                 used, and understand the thought process behind
                                 my design decisions.
                             </CardContent>
                             <CardFooter className="w-full mx-auto text-center">
-                                <Link className='h-full w-full' href={"#projects"}>
-                                <BlurredButton className="text-lg font-mono w-full">
-                                    {'--'} Projects {'--'}
-                                </BlurredButton>
+                                <Link
+                                    className="h-full w-full"
+                                    href={'#projects'}
+                                >
+                                    <BlurredButton className="text-lg font-mono w-full">
+                                        {'--'} Projects {'--'}
+                                    </BlurredButton>
                                 </Link>
                             </CardFooter>
                         </Card>
@@ -83,7 +88,13 @@ export default function Hero() {
                 </div>
             </div>
             {/* Fade to black overlay */}
-            <div className="pointer-events-none absolute left-0 right-0 bottom-0 h-32 z-20" style={{background: "linear-gradient(180deg, transparent 0%, #000 100%)"}} />
+            <div
+                className="pointer-events-none absolute left-0 right-0 bottom-0 h-56 z-20"
+                style={{
+                    background:
+                        'linear-gradient(180deg, transparent 0%, #000 100%)',
+                }}
+            />
         </section>
     );
 }

@@ -7,6 +7,11 @@ import Footer from '@/components/ui/footer';
 
 const navbarLinks = [
     {
+        id: 'asgsasdasddfasdfasdf',
+        url: '/',
+        text: 'Home',
+    },
+    {
         id: 'asgsfasdfasdfasdf',
         url: '#projects',
         text: 'Projects',

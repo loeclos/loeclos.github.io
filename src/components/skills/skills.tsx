@@ -37,7 +37,7 @@ const skills = [
         name: 'Tailwind CSS',
         src: '/tailwindcss/tailwindcss-original.svg',
     },
-    { name: 'PyTorch', src: '/pytorch/pytorch-original.svg' },
+    // { name: 'PyTorch', src: '/pytorch/pytorch-original.svg' },
 ];
 
 const baseUrl = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
