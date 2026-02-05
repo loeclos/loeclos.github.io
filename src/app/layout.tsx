@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import { DM_Sans, DM_Mono, IBM_Plex_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Instrument_Sans } from 'next/font/google';
+import { DM_Sans, DM_Mono, IBM_Plex_Mono, Young_Serif, Playfair_Display, Instrument_Serif } from 'next/font/google';
 import './globals.css';
 import './embla.css';
 
@@ -39,6 +39,18 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 
+const youngSerif = Young_Serif({
+    subsets: ['latin'],
+    weight: ['400'],
+    variable: '--font-serif'
+})
+
+const playfairDisplay = Playfair_Display({
+    subsets: ['latin'],
+    weight: ['400', '500', '700'],
+    variable: '--font-playfair'
+})
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -47,9 +59,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${dmMono.variable} ${ibmPlexMono.variable} antialiased bg-black`}
+                className={`${youngSerif.variable} ${playfairDisplay.variable} ${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${dmMono.variable} ${ibmPlexMono.variable} antialiased bg-black`}
             >
-                
+
                 {children}
             </body>
         </html>

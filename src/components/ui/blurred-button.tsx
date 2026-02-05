@@ -15,16 +15,18 @@ export function BlurredButton({
     ...props
 }: BlurredButtonProps) {
     return (
-        <Button
+        <div className='transition-all duration-100 hover:border-l-4 hover:border-r-4 hover:border-b-0 hover:border-r-0 border-white'>
+            <Button
 
-            className={cn(
-                'px-4 py-6 rounded-2xl backdrop-blur-md text-white bg-zinc-700/10 hover:bg-zinc-600/20 active:bg-zinc-500/20 border-1 border-zinc-950/20 transition-colors duration-300 cursor-pointer',
-                className
-            )}
-            onClick={onClick}
-            {...props}
-        >
-            {children}
-        </Button>
+                className={cn(
+                    'px-4 py-6 rounded-none backdrop-blur-md text-white bg-black hover:bg-zinc-600/20 active:bg-zinc-500/20 border-2 border-dotted border-zinc-100/20 transition-colors duration-300 cursor-pointer',
+                    className
+                )}
+                onClick={onClick}
+                {...props}
+            >
+                {children}
+            </Button>
+        </div>
     );
 }

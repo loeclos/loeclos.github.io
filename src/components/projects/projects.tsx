@@ -21,7 +21,7 @@ export default function Projects() {
 
     useEffect(() => {
         setProjects(request());
-    }, [projects, process]);
+    }, [request, projects, process]);
 
     const handleSearch = (query: string) => {
         const filtered = filterProjects(query);
@@ -32,13 +32,14 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="relative min-h-screen min-w-screen font-mono bg-black z-0"
+            className="relative min-h-screen min-w-screen bg-black z-0"
         >
+
             <div className="relative h-fit min-h-screen w-full">
                 <div className=" gap-24 max-w-[90%] md:max-w-7xl mx-auto pt-10">
                     <Card className="py-12 lg:px-15 flex flex-col justify-center rounded-4xl md:rounded-5xl text-white bg-transparent backdrop-blur-3xl border-none">
-                        <CardHeader className="text-4xl font-mono text-center">
-                            Projects
+                        <CardHeader className="text-4xl font-serif text-center">
+                            projects
                         </CardHeader>
                         <div className="px-5 text-white font-plex-mono">
                             <Label
@@ -58,7 +59,7 @@ export default function Projects() {
                             />
                         </div>
                         <CardContent className="text-md">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 mt-10">
                                 {process === 'loading' ? (
                                     <ProjectsSkeleton />
                                 ) : projects.length == 0 ? (
