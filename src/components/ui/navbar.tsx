@@ -44,12 +44,11 @@ const Navbar = ({ links }: { links: NavbarLink[] }) => {
     };
 
     return (
-        <nav className="fixed lg:left-0 lg:right-0 z-50">
+        <nav className="fixed lg:left-0 lg:right-0 z-40">
             <div
                 ref={navRef}
-                className={`relative w-screen max-w-[90%] lg:max-w-5xl mx-auto transition-transform duration-300 backdrop-blur-md bg-black/20 border border-zinc-950 text-white rounded-2xl shadow-lg ${
-                    isVisible ? 'translate-y-5' : '-translate-y-full'
-                }`}
+                className={`relative w-screen max-w-[90%] lg:max-w-5xl mx-auto transition-transform duration-300 backdrop-blur-md bg-black/20 border border-zinc-950 text-white rounded-2xl shadow-lg ${isVisible ? 'translate-y-5' : '-translate-y-full'
+                    }`}
             >
                 {/* <div className="hidden relative md:grid grid-rows-2 md:grid-rows-1 md:grid-cols-2"> */}
                 <div className="relative">

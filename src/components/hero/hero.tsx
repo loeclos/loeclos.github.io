@@ -35,7 +35,7 @@ export default function Hero() {
                 {/* Content Overlay */}
                 <div className="relative z-10 h-fit w-full lg:py-0 md:py-0 py-20">
                     <div className='flex min-h-screen justify-center items-center'>
-                        <div className="flex  gap-6 max-w-[90%] md:max-w-7xl mx-auto justify-center items-center">
+                        <div className="flex gap-6 max-w-[90%] md:max-w-7xl mx-auto justify-center items-center">
                             <Card className="py-12 px-3 lg:px-15 flex flex-col justify-center rounded-4xl md:rounded-5xl text-white bg-transparent border-none">
                                 <CardHeader className="text-5xl font-serif">
                                     hello!

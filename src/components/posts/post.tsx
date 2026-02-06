@@ -31,8 +31,8 @@ export const Post = ({
             whileHover={{
                 scale: 1.01,
             }}
-            // onHoverStart={() => setIsHovered(true)}
-            // onHoverEnd={() => setIsHovered(false)}
+        // onHoverStart={() => setIsHovered(true)}
+        // onHoverEnd={() => setIsHovered(false)}
         >
             <motion.div
                 className="flex justify-between p-2 items-center relative z-20"

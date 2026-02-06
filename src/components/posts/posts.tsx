@@ -23,7 +23,7 @@ export default function Posts() {
             .then((data_) => {
                 setData(data_);
             })
-            .catch(() => {});
+            .catch(() => { });
     }, [request]);
 
     return (

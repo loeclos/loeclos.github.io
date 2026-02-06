@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Instrument_Sans } from 'next/font/google';
-import { DM_Sans, DM_Mono, IBM_Plex_Mono, Young_Serif, Playfair_Display, Instrument_Serif } from 'next/font/google';
+import { Geist, Geist_Mono, } from 'next/font/google';
+import { DM_Sans, DM_Mono, IBM_Plex_Mono, Young_Serif, Playfair_Display, } from 'next/font/google';
+import { ExpandableScreen } from '@/components/ui/expandable-screen'
 import './globals.css';
 import './embla.css';
 
@@ -57,12 +58,18 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html className="dark" lang="en">
             <body
                 className={`${youngSerif.variable} ${playfairDisplay.variable} ${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${dmMono.variable} ${ibmPlexMono.variable} antialiased bg-black`}
             >
+                <ExpandableScreen
+                    layoutId="cta-card"
+                    triggerRadius="100px"
+                    contentRadius="24px"
+                >
 
-                {children}
+                    {children}
+                </ExpandableScreen>
             </body>
         </html>
     );

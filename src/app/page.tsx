@@ -31,7 +31,7 @@ const navbarLinks = [
 export default function Home() {
     return (
         <div>
-            <Navbar links={navbarLinks} />
+            {/* <Navbar links={navbarLinks} /> */}
             <Hero />
             <Projects />
             <Posts />
