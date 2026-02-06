@@ -51,7 +51,7 @@ export default function Hero() {
                                     </Link>
                                 </CardFooter>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2 pb-20 md:pb-0">
-                                    <Card className="py-12 px-3 flex flex-col justify-center text-white bg-transparent shadow-none border-none">
+                                    <Card className="py-12 md:px-3 flex flex-col justify-center text-white bg-transparent shadow-none border-none">
                                         <CardHeader className="text-2xl">
                                             {/* <p className="inline-flex items-center justify-center rounded-md bg-yellow-400/10 mx-5 px-2 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20 text-center mb-5 cursor-pointer"> */}
                                             {/*     Code */}
@@ -74,7 +74,7 @@ export default function Hero() {
                                             </Link>
                                         </CardFooter>
                                     </Card>
-                                    <Card className="py-12 px-3 flex flex-col justify-center text-white bg-transparent shadow-none border-none">
+                                    <Card className="py-12 md:px-3 flex flex-col justify-center text-white bg-transparent shadow-none border-none">
                                         <CardHeader className="text-2xl">
                                             <span className='font-serif'>
                                                 2. github profile
@@ -98,7 +98,7 @@ export default function Hero() {
                                         </CardFooter>
                                     </Card>
 
-                                    <Card className="py-5 px-3 flex flex-col justify-center text-white bg-transparent shadow-none border-none col-span-2">
+                                    <Card className="py-12  flex flex-col justify-center text-white bg-transparent shadow-none border-none w-full">
                                         <CardContent className="text-sm font-mono min-h-1/2 max-h-1/2">
                                             Other things worth checking out are <Link href={'#'} className='underline hover:text-zinc-400 transition-colors duration-150'>one link</Link> and <Link href={'#'} className='underline hover:text-zinc-400 transition-colors duration-150'>another link</Link>.
                                         </CardContent>
