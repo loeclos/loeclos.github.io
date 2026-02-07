@@ -23,6 +23,7 @@ export default function GetProjects() {
             projectUrl: 'https://loeclos.github.io/',
             skills: ['React', 'Firebase', 'Vite', 'Tailwind'],
             projectType: 'Frontend Application',
+            date: 2025,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180b8574d62b',
@@ -48,6 +49,7 @@ export default function GetProjects() {
             projectUrl: 'https://minifolio-preview.vercel.app',
             skills: ['React', 'Vercel', 'Next.js', 'React', 'pnpm'],
             projectType: 'Frontend Application',
+            date: 2023,
         },
         {
             id: 'cd500df9-152d-4fad-a371-cb47dcdd43ed',
@@ -75,6 +77,7 @@ export default function GetProjects() {
                 'pnpm',
             ],
             projectType: 'Frontend Application',
+            date: 2025,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180b4354547d62b',
@@ -95,6 +98,7 @@ export default function GetProjects() {
             projectUrl: 'https://chessgame-85747.vercel.app/',
             skills: ['JS', 'socket.io', 'pnpm'],
             projectType: 'Backend Application',
+            date: 2025,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d1804345446d62b',
@@ -111,6 +115,7 @@ export default function GetProjects() {
             projectUrl: 'https://linktree-template-preview.vercel.app/',
             skills: ['React', 'Next.JS', 'Typescript'],
             projectType: 'Frontend Application',
+            date: 2025,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180b87d62b',
@@ -135,6 +140,7 @@ export default function GetProjects() {
             projectUrl: 'https://gabc-media-team.web.app/',
             skills: ['React', 'Firebase', 'Vite', 'Tailwind', 'pnpm'],
             projectType: 'Frontend Application',
+            date: 2024,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d18234262b',
@@ -155,6 +161,7 @@ export default function GetProjects() {
             projectUrl: 'https://marvel-information-portal-2qnc.vercel.app/',
             skills: ['React', 'Vercel', 'Vite', 'Sass'],
             projectType: 'Frontend Application',
+            date: 2024,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180434476762b',
@@ -176,6 +183,7 @@ export default function GetProjects() {
             projectUrl: 'https://olhar.media/',
             skills: ['React', 'Tailwind', 'PNPM'],
             projectType: 'Python Application',
+            date: 2024,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180b454d62b',
@@ -193,6 +201,7 @@ export default function GetProjects() {
                 'https://huggingface.co/spaces/loeclos/aircraft-prediction',
             skills: ['Python', 'Yolo', 'Pytorch'],
             projectType: 'Python Application',
+            date: 2025,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d18043446d62b',
@@ -210,9 +219,9 @@ export default function GetProjects() {
             projectUrl: 'https://olhar.media/',
             skills: ['Python', 'PyQT'],
             projectType: 'Python Application',
+            date: 2024,
         },
     ];
-
     const request = useCallback(() => {
         setProcess('success');
         return projects;
@@ -223,7 +232,7 @@ export default function GetProjects() {
     }, []);
 
     const getByID = (id: string) => {
-        return projects.find((project) => project.id === id);
+        return projects.find(project => project["id"] === id)
     };
 
     const filterProjects = (query: string) => {

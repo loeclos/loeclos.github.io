@@ -60,7 +60,7 @@ export default function RootLayout({
     return (
         <html className="dark" lang="en">
             <body
-                className={`${youngSerif.variable} ${playfairDisplay.variable} ${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${dmMono.variable} ${ibmPlexMono.variable} antialiased bg-black`}
+                className={`${youngSerif.variable} ${playfairDisplay.variable} ${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${dmMono.variable} ${ibmPlexMono.variable} antialiased bg-black selection:bg-zinc-700 selection:text-zinc-200`}
             >
                 <ExpandableScreen
                     layoutId="cta-card"
