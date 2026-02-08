@@ -23,7 +23,7 @@ export const Post = ({
 
     return (
         <motion.div
-            className="bg-black/80 backdrop-blur-lg rounded-4xl flex flex-col py-2 px-5 gap-2 overflow-hidden border border-zinc-900"
+            className="bg-black/80 backdrop-blur-lg rounded-xl flex flex-col py-2 px-5 gap-2 overflow-hidden border border-zinc-900 hover:border-zinc-600 transition-colors duration-200"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 40 }}
@@ -41,7 +41,7 @@ export const Post = ({
                 transition={{ delay: 0.3, duration: 0.5 }}
             >
                 <motion.div
-                    className="title text-md md:text-xl text-left font-sans text-white"
+                    className="title text-md text-left font-mono text-white"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.6 }}

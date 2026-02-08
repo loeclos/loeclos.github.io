@@ -100,7 +100,7 @@ export default function Hero() {
 
                                     <Card className="py-12  flex flex-col justify-center text-white bg-transparent shadow-none border-none w-full">
                                         <CardContent className="text-sm font-mono min-h-1/2 max-h-1/2">
-                                            Other things worth checking out are <Link href={'#'} className='underline hover:text-zinc-400 transition-colors duration-150'>one link</Link> and <Link href={'#'} className='underline hover:text-zinc-400 transition-colors duration-150'>another link</Link>.
+                                            Other things worth checking out are <Link href={'/#posts'} className='underline hover:text-zinc-400 transition-colors duration-150'>my blog</Link> and <Link href={'#'} className='underline hover:text-zinc-400 transition-colors duration-150'>another link</Link>.
                                         </CardContent>
                                     </Card>
                                 </div>
