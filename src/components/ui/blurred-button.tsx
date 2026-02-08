@@ -6,16 +6,18 @@ interface BlurredButtonProps
     children: React.ReactNode;
     onClick?: () => void;
     className?: string;
+    parentClassname?: string;
 }
 
 export function BlurredButton({
     children,
     onClick,
     className,
+    parentClassname,
     ...props
 }: BlurredButtonProps) {
     return (
-        <div className='transition-all duration-100 hover:border-l-4 hover:border-r-4 hover:border-b-0 hover:border-r-0 border-white'>
+        <div className={`transition-all duration-100 hover:border-l-4 hover:border-r-4 active:border-l-4 active:border-r-4 border-white ${parentClassname}`}>
             <Button
 
                 className={cn(

@@ -45,7 +45,7 @@ export default function MinimalCardDemo() {
                 <div className="min-h-[500px] p-4 w-full flex flex-col justify-center rounded-lg space-y-4">
                     <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                         {projects ? projects.map((card) => (
-                            <ExpandableScreenTrigger key={card.title}>
+                            <ExpandableScreenTrigger key={card.title} className="cursor-pointer">
                                 <button className="h-full w-full" onClick={() => setSelectedID(card.id)}>
                                     <MinimalCard className="relative">
                                         <MinimalCardImage src={card.thumbnailUrl} alt={card.description} />
@@ -64,7 +64,7 @@ export default function MinimalCardDemo() {
                     </div>
                 </div>
             </div>
-            <ExpandableScreenContent className="bg-black border-1 border-zinc-700 z-50">
+            <ExpandableScreenContent className="bg-black border-1 border-zinc-700 z-50 flex justify-center">
                 <ProjectInfo projectId={selectedId} />
             </ExpandableScreenContent>
         </section>

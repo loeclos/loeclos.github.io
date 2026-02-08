@@ -158,7 +158,7 @@ export function ExpandableScreenContent({
     return (
         <AnimatePresence initial={false}>
             {isExpanded && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-2">
+                <div className="fixed bg-black/20 inset-0 z-50 flex items-center justify-center p-3 sm:p-2">
                     {/* Morphing background with shared layoutId */}
                     <motion.div
                         layoutId={layoutId}
@@ -167,7 +167,7 @@ export function ExpandableScreenContent({
                             borderRadius: contentRadius,
                         }}
                         layout
-                        className={`relative flex h-full w-full overflow-y-auto transform-gpu will-change-transform ${className}`}
+                        className={`relative flex h-full w-full lg:max-w-3xl overflow-y-auto transform-gpu will-change-transform ${className}`}
                     >
                         <motion.div
                             initial={{ opacity: 0 }}

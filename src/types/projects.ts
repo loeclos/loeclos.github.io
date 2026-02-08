@@ -3,14 +3,18 @@ export interface ProjectImage {
     alt: string;
 }
 
+interface url {
+    title: string;
+    url: string;
+}
+
 export interface Project {
     id: string;
     title: string;
     description: string;
     thumbnailUrl: string;
     images: ProjectImage[];
-    codeURL: string;
-    projectUrl: string;
+    urls: url[]
     skills: string[];
     projectType: string;
     date: number;
