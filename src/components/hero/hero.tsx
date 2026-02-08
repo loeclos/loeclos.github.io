@@ -7,7 +7,6 @@ import {
 import { Button } from '../ui/button';
 import { BlurredButton } from '@/components/ui/blurred-button';
 import Link from 'next/link';
-import { Component } from '@/components/raycast-animated-background';
 
 export default function Hero() {
     return (

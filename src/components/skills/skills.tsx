@@ -24,20 +24,13 @@ const skills = [
     { name: 'CodePen', src: '/codepen/codepen-original.svg' },
     { name: 'Replit', src: '/replit/replit-original.svg' },
     { name: 'GitHub', src: '/github/github-original.svg' },
-    {
-        name: 'Stack Overflow',
-        src: '/stackoverflow/stackoverflow-original.svg',
-    },
+    { name: 'Stack Overflow', src: '/stackoverflow/stackoverflow-original.svg' },
     { name: 'VS Code', src: '/vscode/vscode-original.svg' },
     { name: 'Linux', src: '/linux/linux-original.svg' },
     { name: 'npm', src: '/npm/npm-original.svg' },
     { name: 'pnpm', src: '/pnpm/pnpm-original.svg' },
     { name: 'Vite', src: '/vitejs/vitejs-original.svg' },
-    {
-        name: 'Tailwind CSS',
-        src: '/tailwindcss/tailwindcss-original.svg',
-    },
-    // { name: 'PyTorch', src: '/pytorch/pytorch-original.svg' },
+    { name: 'Tailwind CSS', src: '/tailwindcss/tailwindcss-original.svg' },
 ];
 
 const baseUrl = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
@@ -45,30 +38,78 @@ const baseUrl = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
 export default function Skills() {
     return (
         <section
-            className="w-full h-full flex flex-col justify-center items-center px-5 xl:px-96"
             id="skills"
+            className="w-full flex flex-col items-center justify-center py-12"
         >
-            <h1 className="text-4xl font-mono mb-8 text-white text-center">Things I&apos;ve worked with</h1>
-            <div className="w-full h-full flex flex-row flex-wrap gap-4 justify-center items-center">
-                {skills.map((skill) => (
-                    <Tooltip key={skill.name}>
-                        <TooltipTrigger>
-                            <div
-                                className="rounded-3xl border border-zinc-700/20 p-5 bg-zinc-800/20 hover:bg-zinc-700 hover:border-zinc-600 transition-colors duration-200 backdrop-blur-3xl cursor-pointer"
+            <div className="flex flex-col gap-8 max-w-7xl w-full px-4">
+                {/* Header */}
+                <div className="text-center">
+                    <div className="py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
+                        <h2 className="text-3xl font-semibold font-serif">skillset</h2>
+                    </div>
+                    <p className="text-sm py-2 text-muted-foreground">
+                        The tools in my toolbox.
+                    </p>
+                </div>
+
+                {/* Skills Grid */}
+                <div
+                    className="
+            w-full
+            flex flex-wrap justify-center
+            gap-2 sm:gap-4
+            p-4 sm:p-6
+            rounded-3xl
+            bg-gradient-to-br from-zinc-800 to-zinc-900
+            border border-white/5
+          "
+                >
+                    {skills.map((skill) => (
+                        <Tooltip key={skill.name}>
+                            <TooltipTrigger asChild>
+                                <div
+                                    className="
+                    group
+                    p-4
+                    rounded-xl
+                    bg-zinc-800/60
+                    backdrop-blur
+                    border border-white/5
+                    cursor-pointer
+                    transition-all duration-300
+                    hover:-translate-y-1
+                    hover:scale-105
+                    hover:bg-zinc-700/80
+                    hover:shadow-lg hover:shadow-black/40
+                  "
+                                >
+                                    <div className="w-10 h-10 flex items-center justify-center">
+                                        <Image
+                                            src={`${baseUrl}${skill.src}`}
+                                            width={40}
+                                            height={40}
+                                            alt={skill.name}
+                                            className="
+                        object-contain
+                        transition-all duration-300
+                        grayscale opacity-70
+                        group-hover:grayscale-0
+                        group-hover:opacity-100
+                      "
+                                        />
+                                    </div>
+                                </div>
+                            </TooltipTrigger>
+
+                            <TooltipContent
+                                className="
+                "
                             >
-                                <Image
-                                    src={`${baseUrl}${skill.src}`}
-                                    width={50}
-                                    height={50}
-                                    alt={skill.name}
-                                />
-                            </div>
-                        </TooltipTrigger>
-                        <TooltipContent className="font-mono">
-                            <p>{skill.name}</p>
-                        </TooltipContent>
-                    </Tooltip>
-                ))}
+                                {skill.name}
+                            </TooltipContent>
+                        </Tooltip>
+                    ))}
+                </div>
             </div>
         </section>
     );
