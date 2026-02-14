@@ -234,10 +234,10 @@ export default function GetProjects() {
             date: 2024,
         },
     ];
-    const request = useCallback(() => {
+    const request = () => {
         setProcess('success');
         return projects;
-    }, []);
+    };
 
     const clearError = useCallback(() => {
         setProcess('loading');
