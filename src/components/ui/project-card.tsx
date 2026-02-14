@@ -5,7 +5,7 @@ import { Project } from '@/types/projects';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export const ProjectCard = ({id, description, thumbnailUrl, title}: Project) => {
+export const ProjectCard = ({ id, description, thumbnailUrl, title }: Project) => {
     // const [isHovered, setIsHovered] = useState(false);
     const [clicked, setClicked] = useState(false);
 
@@ -16,19 +16,16 @@ export const ProjectCard = ({id, description, thumbnailUrl, title}: Project) => 
     };
 
     return (
-        <motion.div 
-            className='bg-black/80 backdrop-blur-lg rounded-4xl flex flex-col p-2 gap-2 overflow-hidden border border-zinc-900'
+        <motion.div
+            className='bg-black/80 backdrop-blur-lg rounded-none flex flex-col p-2 gap-2 overflow-hidden border border-zinc-900'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 40 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            whileHover={{ 
-                scale: 1.01,
-            }}
-            // onHoverStart={() => setIsHovered(true)}
-            // onHoverEnd={() => setIsHovered(false)}
+        // onHoverStart={() => setIsHovered(true)}
+        // onHoverEnd={() => setIsHovered(false)}
         >
-            <motion.div 
+            <motion.div
                 className='flex justify-end p-2 items-center relative z-20'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -52,27 +49,27 @@ export const ProjectCard = ({id, description, thumbnailUrl, title}: Project) => 
                 </motion.svg> */}
 
                 <Link href={`/projects/${id}`}>
-                <motion.div 
-                    className='w-10 h-10 bg-red-400 rounded-full flex items-center justify-center cursor-pointer'
-                    whileHover={{ 
-                        scale: 1.1, 
-                        backgroundColor: "#db536a",
-                        boxShadow: "0 0 15px rgba(209, 42, 70, 0.7)" 
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    animate={clicked ? { scale: 0.95 } : {}}
-                    onClick={handleButtonClick}
-                    style={{ pointerEvents: 'auto' }}
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M7 17L17 7" />
-                        <path d="M7 7h10v10" />
-                    </svg>
-                </motion.div>
+                    <motion.div
+                        className='w-10 h-10 bg-red-400 rounded-full flex items-center justify-center cursor-pointer'
+                        whileHover={{
+                            scale: 1.1,
+                            backgroundColor: "#db536a",
+                            boxShadow: "0 0 15px rgba(209, 42, 70, 0.7)"
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                        animate={clicked ? { scale: 0.95 } : {}}
+                        onClick={handleButtonClick}
+                        style={{ pointerEvents: 'auto' }}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                        </svg>
+                    </motion.div>
                 </Link>
             </motion.div>
             <div className='flex flex-col gap-4'>
-                <motion.div 
+                <motion.div
                     className="title text-4xl text-center font-sans text-white"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -80,37 +77,37 @@ export const ProjectCard = ({id, description, thumbnailUrl, title}: Project) => 
                 >
                     {title}
                 </motion.div>
-                <motion.div 
+                <motion.div
                     className="image relative"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.7, duration: 0.8 }}
                 >
-                    <motion.div 
+                    <motion.div
                         className="relative z-10 p-2"
                         whileHover={{ scale: 1.03 }}
                         transition={{ ease: "easeInOut" }}
                     >
-                    <Link href={`/projects/${id}`}>
+                        <Link href={`/projects/${id}`}>
 
-                        <Image 
-                            src={`${thumbnailUrl}`}
-                            alt="Project image" 
-                            className="rounded-4xl w-full h-full shadow-lg"
-                            width={500}
-                            height={300}
-                        />
-                    </Link>
+                            <Image
+                                src={`${thumbnailUrl}`}
+                                alt="Project image"
+                                className="rounded-4xl w-full h-full shadow-lg"
+                                width={500}
+                                height={300}
+                            />
+                        </Link>
 
                     </motion.div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                     className="desc text-xs text-center line-clamp-2 max-w-3/4 mx-auto text-neutral-400 font-light"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.9, duration: 0.7 }}
                 >
-                   {description}
+                    {description}
                 </motion.div>
             </div>
         </motion.div>

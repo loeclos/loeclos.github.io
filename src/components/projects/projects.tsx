@@ -1,81 +1,64 @@
 'use client';
+import {
+    MinimalCard,
+    MinimalCardDescription,
+    MinimalCardImage,
+    MinimalCardTitle,
+} from "@/components/ui/minimal-card"
+import { Badge } from "../ui/badge"
+import {
+    ExpandableScreenContent,
+    ExpandableScreenTrigger,
+} from "@/components/ui/expandable-screen"
+import ProjectInfo from "./project-info";
+import { useEffect, useState } from "react"
+import GetProjects from "@/hooks/getProjects"
+import { ProjectsResponse } from "@/types/projects"
 
-import ProjectsSkeleton from '@/components/projects/project-search-skeleton';
-import { useEffect, useState } from 'react';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
-
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import GetProjects from '@/hooks/getProjects';
-import { ProjectsResponse, Project as ProjectProps } from '@/types/projects';
-import SearchError from '@/components/projects/search-error';
-import { ProjectCard } from '@/components/ui/project-card';
-
-function Project(project: ProjectProps) {
-    return <ProjectCard {...project} />;
-}
-
-export default function Projects() {
-    const { request, process, filterProjects } = GetProjects();
+export default function MinimalCardDemo() {
+    const { request, process } = GetProjects();
     const [projects, setProjects] = useState<ProjectsResponse>([]);
+    const [selectedId, setSelectedID] = useState<string | null>(null);
 
     useEffect(() => {
         setProjects(request());
-    }, [projects, process]);
-
-    const handleSearch = (query: string) => {
-        const filtered = filterProjects(query);
-        console.log(filtered);
-        setProjects(filtered);
-    };
+    }, [request, projects, process]);
 
     return (
         <section
             id="projects"
-            className="relative min-h-screen min-w-screen font-mono bg-black z-0"
+            className="relative min-h-screen min-w-screen bg-black z-50"
         >
-            <div className="relative h-fit min-h-screen w-full">
-                <div className=" gap-24 max-w-[90%] md:max-w-7xl mx-auto pt-10">
-                    <Card className="py-12 lg:px-15 flex flex-col justify-center rounded-4xl md:rounded-5xl text-white bg-transparent backdrop-blur-3xl border-none">
-                        <CardHeader className="text-4xl font-mono text-center">
-                            Projects
-                        </CardHeader>
-                        <div className="px-5 text-white font-plex-mono">
-                            <Label
-                                htmlFor="projectSearchInput"
-                                className="py-2"
-                            >
-                                Search Projects (frameworks, libs, langs, etc.)
-                            </Label>
-                            <Input
-                                onInput={(e) => {
-                                    const target = e.target as HTMLInputElement;
-                                    handleSearch(target.value);
-                                }}
-                                id="projectSearchInput"
-                                className="border-zinc-900/25 p-5 rounded-xl"
-                                placeholder="E.G. Next.js"
-                            />
-                        </div>
-                        <CardContent className="text-md">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-                                {process === 'loading' ? (
-                                    <ProjectsSkeleton />
-                                ) : projects.length == 0 ? (
-                                    <SearchError />
-                                ) : (
-                                    projects.map((project) => (
-                                        <Project
-                                            key={project.id}
-                                            {...project}
-                                        />
-                                    ))
-                                )}
-                            </div>
-                        </CardContent>
-                    </Card>
+            <div className="flex flex-col gap-6 max-w-[90%] md:max-w-7xl mx-auto pt-10 py-12 px-3 lg:px-15 ">
+                <div className="p-2 text-center">
+                    <div className="py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600"><h2 className="text-3xl font-semibold font-serif">projects</h2></div>
+                    <p className="text-sm py-3">Stuff that is more or less complete. Click on each one to view more info.</p>
+                </div>
+                <div className="min-h-[500px] p-4 w-full flex flex-col justify-center rounded-lg space-y-4">
+                    <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {projects ? projects.map((card) => (
+                            <ExpandableScreenTrigger key={card.title} className="cursor-pointer">
+                                <button className="h-full w-full" onClick={() => setSelectedID(card.id)}>
+                                    <MinimalCard className="relative">
+                                        <MinimalCardImage src={card.thumbnailUrl} alt={card.description} />
+                                        <div className="w-full absolute top-0 right-0 text-left py-1 px-3">
+                                            <MinimalCardTitle className="flex justify-between">
+                                                <span className="font-mono text-xs  border-1 border-black text-black px-2 py-1 h-8/12 flex justify-center items-center rounded-md backdrop-blur-md bg-transparent bg-white/40">{card.title.toUpperCase()}</span>
+                                                <Badge className="rounded-sm py-[1px] border-1 border-zinc-700 bg-black text-white font-mono text-xs ">{card.date}</Badge>
+                                            </MinimalCardTitle>
+                                            <MinimalCardDescription>
+                                            </MinimalCardDescription>
+                                        </div>
+                                    </MinimalCard>
+                                </button>
+                            </ExpandableScreenTrigger>
+                        )) : null}
+                    </div>
                 </div>
             </div>
+            <ExpandableScreenContent className="bg-black border-1 border-zinc-700 z-50 flex justify-center">
+                <ProjectInfo projectId={selectedId} />
+            </ExpandableScreenContent>
         </section>
-    );
+    )
 }

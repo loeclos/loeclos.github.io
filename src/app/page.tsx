@@ -1,7 +1,7 @@
 import Hero from '@/components/hero/hero';
 import Projects from '@/components/projects/projects';
 import Posts from '@/components/posts/posts';
-import Skills from '@/components/skills/skills';
+import Skills from '@/components/about/about';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
 
@@ -18,8 +18,8 @@ const navbarLinks = [
     },
     {
         id: 'asgsfaserterfddfasdf',
-        url: '#skills',
-        text: 'Skills',
+        url: '#about',
+        text: 'About',
     },
     {
         id: 'asgsfasdfsfddfertretdf',
@@ -31,8 +31,22 @@ const navbarLinks = [
 export default function Home() {
     return (
         <div>
+
             <Navbar links={navbarLinks} />
-            <Hero />
+            <div className="min-h-screen w-full bg-black relative">
+                {/* Vercel Grid */}
+                <div
+                    className="absolute inset-0 opacity-30"
+                    style={{
+                        backgroundImage: `
+          linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+        `,
+                        backgroundSize: "60px 60px",
+                    }}
+                />
+                <Hero />
+            </div>
             <Projects />
             <Posts />
             <Skills />

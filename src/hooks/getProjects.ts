@@ -19,10 +19,13 @@ export default function GetProjects() {
                     alt: 'Showcase portfolio thumbnail',
                 },
             ],
-            codeURL: 'https://github.com/loeclos/loeclos.github.io',
-            projectUrl: 'https://loeclos.github.io/',
+            urls: [
+                { title: 'Github', url: 'https://github.com/loeclos/loeclos.github.io' },
+                { title: 'Preview', url: 'https://loeclos.github.io/' },
+            ],
             skills: ['React', 'Firebase', 'Vite', 'Tailwind'],
             projectType: 'Frontend Application',
+            date: 2025,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180b8574d62b',
@@ -44,10 +47,13 @@ export default function GetProjects() {
                     alt: 'Minifolio screenshot 2',
                 },
             ],
-            codeURL: 'https://github.com/loeclos/Minifolio',
-            projectUrl: 'https://minifolio-preview.vercel.app',
-            skills: ['React', 'Vercel', 'Next.js', 'React', 'pnpm'],
+            urls: [
+                { title: 'Github', url: 'https://github.com/loeclos/Minifolio' },
+                { title: 'Preview', url: 'https://minifolio-preview.vercel.app' },
+            ],
+            skills: ['React', 'Vercel', 'Next.js', 'pnpm'],
             projectType: 'Frontend Application',
+            date: 2023,
         },
         {
             id: 'cd500df9-152d-4fad-a371-cb47dcdd43ed',
@@ -64,17 +70,13 @@ export default function GetProjects() {
                     alt: 'Chess website screenshot 1',
                 },
             ],
-            projectUrl: 'https://chessgame-85747.vercel.app/',
-            codeURL: 'https://github.com/loeclos/chess-frontend',
-            skills: [
-                'React',
-                'TypeScript',
-                'Next.js',
-                'Tailwind CSS',
-                'Vercel',
-                'pnpm',
+            urls: [
+                { title: 'Github', url: 'https://github.com/loeclos/chess-frontend' },
+                { title: 'Preview', url: 'https://chessgame-85747.vercel.app/' },
             ],
+            skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Vercel', 'pnpm'],
             projectType: 'Frontend Application',
+            date: 2025,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180b4354547d62b',
@@ -91,10 +93,13 @@ export default function GetProjects() {
                     alt: 'Chess backend screenshot 1',
                 },
             ],
-            codeURL: 'https://github.com/loeclos/chess-backend',
-            projectUrl: 'https://chessgame-85747.vercel.app/',
+            urls: [
+                { title: 'Github', url: 'https://github.com/loeclos/chess-backend' },
+                { title: 'Preview', url: 'https://chessgame-85747.vercel.app/' },
+            ],
             skills: ['JS', 'socket.io', 'pnpm'],
             projectType: 'Backend Application',
+            date: 2025,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d1804345446d62b',
@@ -107,10 +112,13 @@ export default function GetProjects() {
                     alt: 'Linktree website thumbnail',
                 },
             ],
-            codeURL: 'https://github.com/loeclos/linktree-template',
-            projectUrl: 'https://linktree-template-preview.vercel.app/',
+            urls: [
+                { title: 'Github', url: 'https://github.com/loeclos/linktree-template' },
+                { title: 'Preview', url: 'https://linktree-template-preview.vercel.app/' },
+            ],
             skills: ['React', 'Next.JS', 'Typescript'],
             projectType: 'Frontend Application',
+            date: 2025,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180b87d62b',
@@ -131,10 +139,13 @@ export default function GetProjects() {
                     alt: 'Media team site screenshot 2',
                 },
             ],
-            codeURL: 'https://github.com/loeclos/Media-Team-Web-Firebase',
-            projectUrl: 'https://gabc-media-team.web.app/',
+            urls: [
+                { title: 'Github', url: 'https://github.com/loeclos/Media-Team-Web-Firebase' },
+                { title: 'Preview', url: 'https://gabc-media-team.web.app/' },
+            ],
             skills: ['React', 'Firebase', 'Vite', 'Tailwind', 'pnpm'],
             projectType: 'Frontend Application',
+            date: 2024,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d18234262b',
@@ -151,10 +162,13 @@ export default function GetProjects() {
                     alt: 'Marvel information portal screenshot 1',
                 },
             ],
-            codeURL: 'https://github.com/loeclos/Marvel-Information-Portal',
-            projectUrl: 'https://marvel-information-portal-2qnc.vercel.app/',
+            urls: [
+                { title: 'Github', url: 'https://github.com/loeclos/Marvel-Information-Portal' },
+                { title: 'Preview', url: 'https://marvel-information-portal-2qnc.vercel.app/' },
+            ],
             skills: ['React', 'Vercel', 'Vite', 'Sass'],
             projectType: 'Frontend Application',
+            date: 2024,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180434476762b',
@@ -172,10 +186,13 @@ export default function GetProjects() {
                     alt: 'Nutrify website screenshot 1',
                 },
             ],
-            codeURL: 'https://github.com/loeclos/OlharDevice',
-            projectUrl: 'https://olhar.media/',
+            urls: [
+                { title: 'Github', url: 'https://github.com/loeclos/OlharDevice' },
+                { title: 'Preview', url: 'https://olhar.media/' },
+            ],
             skills: ['React', 'Tailwind', 'PNPM'],
             projectType: 'Python Application',
+            date: 2024,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d180b454d62b',
@@ -188,11 +205,13 @@ export default function GetProjects() {
                     alt: 'Aircraft prediction thumbnail',
                 },
             ],
-            codeURL: 'https://github.com/loeclos/aircraft-prediction',
-            projectUrl:
-                'https://huggingface.co/spaces/loeclos/aircraft-prediction',
+            urls: [
+                { title: 'Github', url: 'https://github.com/loeclos/aircraft-prediction' },
+                { title: 'Preview', url: 'https://huggingface.co/spaces/loeclos/aircraft-prediction' },
+            ],
             skills: ['Python', 'Yolo', 'Pytorch'],
             projectType: 'Python Application',
+            date: 2025,
         },
         {
             id: 'b9c564ec-4811-4237-a2b8-9d18043446d62b',
@@ -206,13 +225,15 @@ export default function GetProjects() {
                     alt: 'Olhar device thumbnail',
                 },
             ],
-            codeURL: 'https://github.com/loeclos/OlharDevice',
-            projectUrl: 'https://olhar.media/',
+            urls: [
+                { title: 'Github', url: 'https://github.com/loeclos/OlharDevice' },
+                { title: 'Preview', url: 'https://olhar.media/' },
+            ],
             skills: ['Python', 'PyQT'],
             projectType: 'Python Application',
+            date: 2024,
         },
     ];
-
     const request = useCallback(() => {
         setProcess('success');
         return projects;
@@ -223,7 +244,7 @@ export default function GetProjects() {
     }, []);
 
     const getByID = (id: string) => {
-        return projects.find((project) => project.id === id);
+        return projects.find(project => project["id"] === id)
     };
 
     const filterProjects = (query: string) => {

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import { DM_Sans, DM_Mono, IBM_Plex_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, } from 'next/font/google';
+import { DM_Sans, DM_Mono, IBM_Plex_Mono, Young_Serif, Playfair_Display, } from 'next/font/google';
+import { ExpandableScreen } from '@/components/ui/expandable-screen'
 import './globals.css';
-import './embla.css';
 
 export const metadata: Metadata = {
     title: 'Gleb Zhukov - Developer',
@@ -39,18 +39,36 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 
+const youngSerif = Young_Serif({
+    subsets: ['latin'],
+    weight: ['400'],
+    variable: '--font-serif'
+})
+
+const playfairDisplay = Playfair_Display({
+    subsets: ['latin'],
+    weight: ['400', '500', '700'],
+    variable: '--font-playfair'
+})
+
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html className="dark" lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${dmMono.variable} ${ibmPlexMono.variable} antialiased bg-black`}
+                className={`${youngSerif.variable} ${playfairDisplay.variable} ${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${dmMono.variable} ${ibmPlexMono.variable} antialiased bg-black selection:bg-zinc-700 selection:text-zinc-200`}
             >
-                
-                {children}
+                <ExpandableScreen
+                    layoutId="cta-card"
+                    triggerRadius="100px"
+                    contentRadius="24px"
+                >
+
+                    {children}
+                </ExpandableScreen>
             </body>
         </html>
     );

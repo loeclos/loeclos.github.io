@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import './loader.css';
 
 export default function Loader() {
