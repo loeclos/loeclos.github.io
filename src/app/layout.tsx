@@ -3,7 +3,6 @@ import { Geist, Geist_Mono, } from 'next/font/google';
 import { DM_Sans, DM_Mono, IBM_Plex_Mono, Young_Serif, Playfair_Display, } from 'next/font/google';
 import { ExpandableScreen } from '@/components/ui/expandable-screen'
 import './globals.css';
-import './embla.css';
 
 export const metadata: Metadata = {
     title: 'Gleb Zhukov - Developer',
