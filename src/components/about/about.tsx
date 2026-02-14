@@ -5,7 +5,6 @@ export default function Skills() {
             className="w-full flex flex-col gap-3 items-center justify-center py-12"
         >
             <div className="flex flex-col gap-8 max-w-7xl w-full px-4">
-                {/* Header */}
                 <div className="text-center">
                     <div className="py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
                         <h2 className="text-3xl font-semibold font-serif">about</h2>

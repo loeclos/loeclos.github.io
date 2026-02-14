@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import GetPosts from '@/hooks/getPosts';
 import { Post } from '@/components/posts/post';

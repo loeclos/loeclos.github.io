@@ -28,12 +28,12 @@ export default function Hero() {
                                 hello!
                             </CardHeader>
                             <CardContent className="text-sm font-mono">
-                                Gleb Zhukov, at your service. I searched far and wide for a title that would suit me, and I finally came up with &quot;agile developer&quot;
+                                Gleb Zhukov, at your service.
                             </CardContent>
                             <CardFooter className="w-full mx-auto text-center">
-                                <Link className="h-full w-full" href={'#skills'}>
+                                <Link className="h-full w-full" href={'#about'}>
                                     <BlurredButton className="text-sm font-mono w-full">
-                                        JUMP TO MY SKILLS {'->'}
+                                        LEARN MORE ABOUT ME {'->'}
                                     </BlurredButton>
                                 </Link>
                             </CardFooter>

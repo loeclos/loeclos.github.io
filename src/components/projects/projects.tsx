@@ -12,14 +12,11 @@ import {
 } from "@/components/ui/expandable-screen"
 import ProjectInfo from "./project-info";
 import { useEffect, useState } from "react"
-
 import GetProjects from "@/hooks/getProjects"
 import { ProjectsResponse } from "@/types/projects"
 
-
-
 export default function MinimalCardDemo() {
-    const { request, process, filterProjects } = GetProjects();
+    const { request, process } = GetProjects();
     const [projects, setProjects] = useState<ProjectsResponse>([]);
     const [selectedId, setSelectedID] = useState<string | null>(null);
 
@@ -27,11 +24,6 @@ export default function MinimalCardDemo() {
         setProjects(request());
     }, [request, projects, process]);
 
-    // const handleSearch = (query: string) => {
-    //     const filtered = filterProjects(query);
-    //     console.log(filtered);
-    //     setProjects(filtered);
-    // };
     return (
         <section
             id="projects"

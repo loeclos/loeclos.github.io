@@ -53,26 +53,10 @@ const Footer = ({
 
             ],
         },
-        // {
-        //   title: "Resources",
-        //   links: [
-        //     { text: "Help", url: "#" },
-        //     { text: "Sales", url: "#" },
-        //     { text: "Advertise", url: "#" },
-        //   ],
-        // },
-        // {
-        //   title: "Social",
-        //   links: [
-        //     { text: "Twitter", url: "#" },
-        //     { text: "Instagram", url: "#" },
-        //     { text: "LinkedIn", url: "#" },
-        //   ],
-        // },
     ],
     copyright = "© 2025-2100 Copyright. All rights reserved.",
     bottomLinks = [
-        { text: "discord", url: "https://discord.gg/zWQ3Hwq8" },
+        { text: "discord", url: "https://discord.gg/FsC6B5ZPPR" },
     ],
 }: FooterProps) => {
     return (

@@ -12,13 +12,11 @@ export const Post = ({
     title: string;
     categories: string[];
 }) => {
-    // const [isHovered, setIsHovered] = useState(false);
     const [clicked, setClicked] = useState(false);
 
     const handleButtonClick = () => {
         setClicked(true);
         setTimeout(() => setClicked(false), 300);
-        // Add your button logic here
     };
 
     return (
@@ -31,8 +29,6 @@ export const Post = ({
             whileHover={{
                 scale: 1.01,
             }}
-        // onHoverStart={() => setIsHovered(true)}
-        // onHoverEnd={() => setIsHovered(false)}
         >
             <motion.div
                 className="flex justify-between p-2 items-center relative z-20"

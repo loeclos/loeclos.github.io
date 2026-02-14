@@ -2,17 +2,9 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay"
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
 import { ArrowUpRightIcon } from "lucide-react";
 import { CraftButton, CraftButtonLabel, CraftButtonIcon } from '@/components/ui/craft-button'
 import { Badge } from "../ui/badge";
@@ -21,13 +13,11 @@ import GetProjects from "@/hooks/getProjects";
 import { useEffect, useState } from "react";
 import { Project } from "@/types/projects";
 import Image from 'next/image'
-import { EmblaCarouselType } from "embla-carousel";
-import { BlurredButton } from "../ui/blurred-button";
 import Link from "next/link";
 
 
 export default function ProjectInfo({ projectId }: { projectId: string | null }) {
-    const { getByID, getAll } = GetProjects();
+    const { getByID } = GetProjects();
     const [project, setProject] = useState<Project | null>();
 
     useEffect(() => {
@@ -40,8 +30,6 @@ export default function ProjectInfo({ projectId }: { projectId: string | null })
         }
     }, []);
 
-
-
     return (
         <div className="flex items-center justify-center w-full h-full">
             {project ? (<View project={project} />) : (<div className="w-full h-full justify-center items-center"><h1 className="text-black text-3xl font-serif">Project not found.</h1></div>)}
@@ -50,9 +38,7 @@ export default function ProjectInfo({ projectId }: { projectId: string | null })
 
 }
 
-
 const View = ({ project }: { project: Project }) => {
-
     const [current, setCurrent] = useState(0)
     const [count, setCount] = useState(0)
     const [api, setApi] = useState<CarouselApi>()
@@ -72,10 +58,10 @@ const View = ({ project }: { project: Project }) => {
         <div className="w-full h-full">
             <ScrollArea className="w-full h-full pt-12 flex flex-col items-center">
                 <div className="w-full flex flex-col mx-auto max-w-9xl md:max-w-7xl lg:max-w-xl justify-left items-start">
+
                     <div className=" px-5">
                         <h1 className="text-2xl font-serif">{project['title']}</h1>
                     </div>
-
                     <div className="px-5 py-4">
                         <p className="text-md font-sans">{project['description']}</p>
                     </div>
@@ -92,6 +78,7 @@ const View = ({ project }: { project: Project }) => {
                             </Link>
                         ))}
                     </div>
+
                 </div>
 
                 <div className="w-full py-5">
@@ -130,11 +117,9 @@ const View = ({ project }: { project: Project }) => {
                         </div>
                     </div>
                 </div>
-
                 <hr className="block md:hidden" />
+
             </ScrollArea>
-
-        </div >
-
+        </div>
     )
 }
