@@ -26,9 +26,8 @@ export default function ProjectInfo({ projectId }: { projectId: string | null })
             if (projectData) {
                 setProject(projectData);
             }
-
         }
-    }, []);
+    }, [getByID, projectId]);
 
     return (
         <div className="flex items-center justify-center w-full h-full">

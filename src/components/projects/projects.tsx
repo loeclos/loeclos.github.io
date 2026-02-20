@@ -22,7 +22,7 @@ export default function MinimalCardDemo() {
 
     useEffect(() => {
         setProjects(request());
-    }, [request, projects, process]);
+    }, [request]);
 
     return (
         <section

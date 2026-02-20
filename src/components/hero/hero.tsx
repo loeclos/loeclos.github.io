@@ -4,7 +4,6 @@ import {
     CardHeader,
     CardContent,
 } from '@/components/ui/card';
-import { Button } from '../ui/button';
 import { BlurredButton } from '@/components/ui/blurred-button';
 import Link from 'next/link';
 
