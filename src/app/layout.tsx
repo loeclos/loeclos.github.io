@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, } from 'next/font/google';
-import { DM_Sans, DM_Mono, IBM_Plex_Mono, Young_Serif, Playfair_Display, } from 'next/font/google';
+import { Geist, Young_Serif, Geist_Mono, Playfair_Display } from 'next/font/google';
 import { ExpandableScreen } from '@/components/ui/expandable-screen'
+
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -19,30 +19,10 @@ const geistMono = Geist_Mono({
     subsets: ['latin'],
 });
 
-
-const dmSans = DM_Sans({
-    subsets: ['latin'],
-    weight: ['300', '400', '500'],
-    variable: '--font-dm-sans',
-});
-
-const dmMono = DM_Mono({
-    subsets: ['latin'],
-    weight: ['300', '400', '500'],
-    variable: '--font-dm-mono',
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-    subsets: ['latin'],
-    weight: ['300', '400', '500'],
-    variable: '--font-ibm-plex-mono',
-});
-
-
 const youngSerif = Young_Serif({
+    variable: '--font-serif',
     subsets: ['latin'],
-    weight: ['400'],
-    variable: '--font-serif'
+    weight: ['400']
 })
 
 const playfairDisplay = Playfair_Display({
@@ -59,14 +39,13 @@ export default function RootLayout({
     return (
         <html className="dark" lang="en">
             <body
-                className={`${youngSerif.variable} ${playfairDisplay.variable} ${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${dmMono.variable} ${ibmPlexMono.variable} antialiased bg-black selection:bg-zinc-700 selection:text-zinc-200`}
+                className={`${youngSerif.variable} ${playfairDisplay.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-black selection:bg-zinc-700 selection:text-zinc-200`}
             >
                 <ExpandableScreen
                     layoutId="cta-card"
                     triggerRadius="100px"
                     contentRadius="24px"
                 >
-
                     {children}
                 </ExpandableScreen>
             </body>
