@@ -34,7 +34,6 @@ export default function Home() {
 
             <Navbar links={navbarLinks} />
             <div className="min-h-screen w-full bg-black relative">
-                {/* Vercel Grid */}
                 <div
                     className="absolute inset-0 opacity-30"
                     style={{

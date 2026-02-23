@@ -1,4 +1,5 @@
 'use client';
+
 import {
     MinimalCard,
     MinimalCardDescription,
@@ -16,7 +17,7 @@ import GetProjects from "@/hooks/getProjects"
 import { ProjectsResponse } from "@/types/projects"
 
 export default function MinimalCardDemo() {
-    const { request, process } = GetProjects();
+    const { request } = GetProjects();
     const [projects, setProjects] = useState<ProjectsResponse>([]);
     const [selectedId, setSelectedID] = useState<string | null>(null);
 

@@ -16,6 +16,10 @@ const projects: Project[] = [
                 src: '/images/PORTFOLIO-thumbnail.png',
                 alt: 'Showcase portfolio thumbnail',
             },
+            {
+                src: '/images/PORTFOLIO-01.png',
+                alt: 'Portfolio screenshot.'
+            }
         ],
         urls: [
             { title: 'Github', url: 'https://github.com/loeclos/loeclos.github.io' },
@@ -40,10 +44,6 @@ const projects: Project[] = [
                 src: '/images/MINIFOLIO-01.png',
                 alt: 'Minifolio screenshot 1',
             },
-            {
-                src: '/images/MINIFOLIO-02.png',
-                alt: 'Minifolio screenshot 2',
-            },
         ],
         urls: [
             { title: 'Github', url: 'https://github.com/loeclos/Minifolio' },
@@ -67,6 +67,10 @@ const projects: Project[] = [
                 src: '/images/CHESS-01.png',
                 alt: 'Chess website screenshot 1',
             },
+            {
+                src: '/images/CHESS-02.png',
+                alt: 'Chess website screenshot 2',
+            },
         ],
         urls: [
             { title: 'Github', url: 'https://github.com/loeclos/chess-frontend' },
@@ -84,11 +88,15 @@ const projects: Project[] = [
         images: [
             {
                 src: '/images/CHESS-thumbnail.png',
-                alt: 'Chess backend thumbnail',
+                alt: 'Chess website thumbnail',
             },
             {
                 src: '/images/CHESS-01.png',
-                alt: 'Chess backend screenshot 1',
+                alt: 'Chess website screenshot 1',
+            },
+            {
+                src: '/images/CHESS-02.png',
+                alt: 'Chess website screenshot 2',
             },
         ],
         urls: [
@@ -132,10 +140,6 @@ const projects: Project[] = [
                 src: '/images/GABC-01.png',
                 alt: 'Media team site screenshot 1',
             },
-            {
-                src: '/images/GABC-02.png',
-                alt: 'Media team site screenshot 2',
-            },
         ],
         urls: [
             { title: 'Github', url: 'https://github.com/loeclos/Media-Team-Web-Firebase' },
@@ -143,53 +147,6 @@ const projects: Project[] = [
         ],
         skills: ['React', 'Firebase', 'Vite', 'Tailwind', 'pnpm'],
         projectType: 'Frontend Application',
-        date: 2024,
-    },
-    {
-        id: 'b9c564ec-4811-4237-a2b8-9d18234262b',
-        title: 'Marvel Information portal',
-        description: 'A helpful site for Marvel lovers.',
-        thumbnailUrl: '/images/MARVEL-thumbnail.png',
-        images: [
-            {
-                src: '/images/MARVEL-thumbnail.png',
-                alt: 'Marvel information portal thumbnail',
-            },
-            {
-                src: '/images/MARVEL-01.png',
-                alt: 'Marvel information portal screenshot 1',
-            },
-        ],
-        urls: [
-            { title: 'Github', url: 'https://github.com/loeclos/Marvel-Information-Portal' },
-            { title: 'Preview', url: 'https://marvel-information-portal-2qnc.vercel.app/' },
-        ],
-        skills: ['React', 'Vercel', 'Vite', 'Sass'],
-        projectType: 'Frontend Application',
-        date: 2024,
-    },
-    {
-        id: 'b9c564ec-4811-4237-a2b8-9d180434476762b',
-        title: 'Nutrify Website',
-        description:
-            'A website for a nutritionist, created with React, Vite, and Tailwind. The website features a blog, contact page, and about page.',
-        thumbnailUrl: '/images/NUTRIFY-thumbnail.png',
-        images: [
-            {
-                src: '/images/NUTRIFY-thumbnail.png',
-                alt: 'Nutrify website thumbnail',
-            },
-            {
-                src: '/images/NUTRIFY-01.png',
-                alt: 'Nutrify website screenshot 1',
-            },
-        ],
-        urls: [
-            { title: 'Github', url: 'https://github.com/loeclos/OlharDevice' },
-            { title: 'Preview', url: 'https://olhar.media/' },
-        ],
-        skills: ['React', 'Tailwind', 'PNPM'],
-        projectType: 'Python Application',
         date: 2024,
     },
     {

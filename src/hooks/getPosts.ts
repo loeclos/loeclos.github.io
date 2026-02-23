@@ -12,31 +12,29 @@ export default function GetPosts() {
                 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Floeclos.medium.com%2Ffeed'
             );
 
-            // Check for HTTP errors (e.g., 404, 500)
             if (!response.ok) {
-                // You can throw an error with more details if needed
-                setProcess('error'); 
+                setProcess('error');
             }
 
-            const data = await response.json(); // Or .text(), .blob(), etc.
-            setProcess('success'); 
+            const data = await response.json();
+            setProcess('success');
             return data;
         } catch (error) {
-            setProcess('error'); 
+            setProcess('error');
             throw error;
         }
     }, []);
 
 
     const clearError = useCallback(() => {
-        setProcess('loading'); 
+        setProcess('loading');
     }, []);
 
 
-    return { 
+    return {
         request,
         clearError,
         process,
         setProcess,
-    }; 
+    };
 }
