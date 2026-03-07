@@ -1,6 +1,5 @@
 import Hero from '@/components/hero/hero';
 import Projects from '@/components/projects/projects';
-import Posts from '@/components/posts/posts';
 import Skills from '@/components/about/about';
 import Navbar from '@/components/ui/navbar';
 import Footer from '@/components/ui/footer';
@@ -47,7 +46,6 @@ export default function Home() {
                 <Hero />
             </div>
             <Projects />
-            <Posts />
             <Skills />
             <div className="flex justify-center items-center h-full w-full">
                 <Footer />
