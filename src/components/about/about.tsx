@@ -2,7 +2,7 @@ export default function Skills() {
     return (
 
         <section
-            id="posts"
+            id="about"
             className="relative h-fit min-w-screen bg-black z-0"
         >
             <div className="flex flex-col gap-6 max-w-[90%] md:max-w-7xl mx-auto pt-10 py-12 px-3 lg:px-15 ">
