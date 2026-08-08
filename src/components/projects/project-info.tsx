@@ -56,7 +56,7 @@ const View = ({ project }: { project: Project }) => {
     return (
         <div className="w-full h-full">
             <ScrollArea className="w-full h-full pt-12 flex flex-col items-center">
-                <div className="w-full flex flex-col mx-auto max-w-9xl md:max-w-7xl lg:max-w-xl justify-left items-start">
+                <div className="w-full flex flex-col mx-auto max-w-3xl justify-left items-start">
 
                     <div className=" px-5">
                         <h1 className="text-2xl font-serif">{project['title']}</h1>
@@ -94,7 +94,7 @@ const View = ({ project }: { project: Project }) => {
                                         height={400}
                                         src={image['src']}
                                         alt={image['alt']}
-                                        className="rounded-md"
+                                        className="rounded-md w-full h-auto"
                                     />
                                 </CarouselItem>
                             ))}

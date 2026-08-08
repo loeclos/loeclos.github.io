@@ -12,10 +12,7 @@ const MinimalCard = React.forwardRef<
     <div
         ref={ref}
         className={cn(
-            "rounded-xs hover:scale-101 transition-all cursor-pointer duration-200 dark:bg-neutral-800 bg-neutral-50 p-1 no-underline shadow-sm hover:bg-neutral-100 dark:hover:bg-neutral-800/80 ",
-            // "shadow-[0px_1px_1px_0px_rgba(0,0,0,0.05),0px_1px_1px_0px_rgba(255,252,240,0.5)_inset,0px_0px_0px_1px_hsla(0,0%,100%,0.1)_inset,0px_0px_1px_0px_rgba(28,27,26,0.5)]",
-            // "shadow-[rgba(17,24,28,0.08)_0_0_0_1px,rgba(17,24,28,0.08)_0_1px_2px_-1px,rgba(17,24,28,0.04)_0_2px_4px]",
-            // "dark:shadow-[0_1px_0_0_rgba(255,255,255,0.03)_inset,0_0_0_1px_rgba(255,255,255,0.03)_inset,0_0_0_1px_rgba(0,0,0,0.1),0_2px_2px_0_rgba(0,0,0,0.1),0_4px_4px_0_rgba(0,0,0,0.1),0_8px_8px_0_rgba(0,0,0,0.1)]",
+            "rounded-3xl transition-all cursor-pointer duration-200 hover:bg-amber-200/20 bg-neutral-800 p-1 no-underline shadow-sm ",
             className
         )}
         {...props}
@@ -27,14 +24,12 @@ MinimalCard.displayName = "MinimalCard"
 
 const MinimalCardImage = React.forwardRef<
     HTMLDivElement,
-    React.HTMLAttributes<HTMLDivElement> & { src: string; alt: string }
->(({ className, alt, src, ...props }, ref) => (
+    React.HTMLAttributes<HTMLDivElement> & { src: string; alt: string; priority?: boolean }
+>(({ className, alt, src, priority, ...props }, ref) => (
     <div
         ref={ref}
         className={cn(
-            "relative h-[220px] md:h-[240px] lg:h-[260px] w-full",
-            // "shadow-[0px_1px_1px_0px_rgba(0,0,0,0.05),0px_1px_1px_0px_rgba(255,252,240,0.5)_inset,0px_0px_0px_1px_hsla(0,0%,100%,0.1)_inset,0px_0px_1px_0px_rgba(28,27,26,0.5)]",
-            // "dark:shadow-[0_1px_0_0_rgba(255,255,255,0.03)_inset,0_0_0_1px_rgba(255,255,255,0.03)_inset,0_0_0_1px_rgba(0,0,0,0.1),0_2px_2px_0_rgba(0,0,0,0.1),0_4px_4px_0_rgba(0,0,0,0.1),0_8px_8px_0_rgba(0,0,0,0.1)]",
+            "relative aspect-video w-full",
             className
         )}
         {...props}
@@ -42,9 +37,10 @@ const MinimalCardImage = React.forwardRef<
         <Image
             src={src}
             alt={alt}
-            width={200}
-            height={200}
-            className=" rounded-xs object-cover absolute h-full w-full inset-0 "
+            width={640}
+            height={360}
+            priority={priority}
+            className=" rounded-2xl object-cover absolute h-full w-full inset-0 "
         />
     </div>
 ))

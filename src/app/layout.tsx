@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import { Geist, Young_Serif, Geist_Mono, Playfair_Display, Google_Sans_Code } from 'next/font/google';
+import { Geist, Young_Serif, Geist_Mono, Google_Sans_Code } from 'next/font/google';
 import { ExpandableScreen } from '@/components/ui/expandable-screen'
+import BayerBackground from '@/components/bayer-background/bayer-background'
 
 import './globals.css';
 
@@ -25,15 +26,9 @@ const youngSerif = Young_Serif({
   weight: ['400']
 })
 
-const playfairDisplay = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-playfair'
-})
-
 const googleSansCode = Google_Sans_Code({
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
+  weight: ['400', '500'],
   variable: '--font-google'
 })
 
@@ -45,8 +40,9 @@ export default function RootLayout({
   return (
     <html className="dark" lang="en">
       <body
-        className={`${youngSerif.variable} ${googleSansCode.variable} ${playfairDisplay.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-white selection:bg-zinc-700 selection:text-zinc-200`}
+        className={`${youngSerif.variable} ${googleSansCode.variable} ${geistSans.variable} ${geistMono.variable} antialiased background selection:bg-zinc-700 selection:text-zinc-200`}
       >
+        <BayerBackground />
 
         <ExpandableScreen
           layoutId="cta-card"

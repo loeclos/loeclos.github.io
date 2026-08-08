@@ -105,33 +105,20 @@ export function ExpandableScreenTrigger({
     children,
     className = "",
 }: ExpandableScreenTriggerProps) {
-    const { isExpanded, expand, layoutId, triggerRadius } = useExpandableScreen()
+    const { isExpanded, expand } = useExpandableScreen()
 
     return (
         <AnimatePresence initial={false}>
             {!isExpanded && (
-                <motion.div className={`inline-block relative ${className}`}>
-                    {/* Background layer with shared layoutId for morphing */}
-                    <motion.div
-                        style={{
-                            borderRadius: triggerRadius,
-                        }}
-                        layout
-                        layoutId={layoutId}
-                        className="absolute inset-0 transform-gpu will-change-transform"
-                    />
-                    {/* Content layer that fades out on expand */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.2 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                        layout={false}
-                        onClick={expand}
-                        className="relative cursor-pointer"
-                    >
-                        {children}
-                    </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.2 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    onClick={expand}
+                    className={`relative inline-block cursor-pointer ${className}`}
+                >
+                    {children}
                 </motion.div>
             )}
         </AnimatePresence>
@@ -152,21 +139,22 @@ export function ExpandableScreenContent({
     showCloseButton = true,
     closeButtonClassName = "",
 }: ExpandableScreenContentProps) {
-    const { isExpanded, collapse, layoutId, contentRadius, animationDuration } =
+    const { isExpanded, collapse, contentRadius, animationDuration } =
         useExpandableScreen()
 
     return (
         <AnimatePresence initial={false}>
             {isExpanded && (
                 <div className="fixed bg-black/20 inset-0 z-50 flex items-center justify-center p-3 sm:p-2">
-                    {/* Morphing background with shared layoutId */}
+                    {/* Centered panel with scale+fade */}
                     <motion.div
-                        layoutId={layoutId}
-                        transition={{ duration: animationDuration }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        transition={{ duration: animationDuration, ease: "easeOut" }}
                         style={{
                             borderRadius: contentRadius,
                         }}
-                        layout
                         className={`relative flex h-full w-full lg:max-w-3xl overflow-y-auto transform-gpu will-change-transform ${className}`}
                     >
                         <motion.div
