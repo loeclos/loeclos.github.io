@@ -1,23 +1,21 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import { Project } from '@/types/projects';
-
-export type ProcessState = 'error' | 'loading' | 'success';
 
 const projects: Project[] = [
     {
         id: 'b9c564ec-4811-4237-a2b8-9d180b8325662b',
         title: 'Portfolio Website',
         description: "The main hub for my stuff",
-        thumbnailUrl: '/images/PORTFOLIO-thumbnail.png',
+        thumbnailUrl: '/images/PORTFOLIO-thumbnail.webp',
         images: [
             {
-                src: '/images/PORTFOLIO-thumbnail.png',
+                src: '/images/PORTFOLIO-thumbnail.webp',
                 alt: 'Showcase portfolio thumbnail',
             },
             {
-                src: '/images/PORTFOLIO-01.png',
+                src: '/images/PORTFOLIO-01.webp',
                 alt: 'Portfolio screenshot.'
             }
         ],
@@ -34,14 +32,14 @@ const projects: Project[] = [
         title: 'Minifolio',
         description:
             '⚡ A minimal portfolio template for Developers | 2025. I was the one who migrated the old template (written in JS and html) to React/Next.JS and TS.',
-        thumbnailUrl: '/images/MINIFOLIO-thumbnail.png',
+        thumbnailUrl: '/images/MINIFOLIO-thumbnail.webp',
         images: [
             {
-                src: '/images/MINIFOLIO-thumbnail.png',
+                src: '/images/MINIFOLIO-thumbnail.webp',
                 alt: 'Minifolio thumbnail',
             },
             {
-                src: '/images/MINIFOLIO-01.png',
+                src: '/images/MINIFOLIO-01.webp',
                 alt: 'Minifolio screenshot 1',
             },
         ],
@@ -57,18 +55,18 @@ const projects: Project[] = [
         id: 'cd500df9-152d-4fad-a371-cb47dcdd43ed',
         title: 'Chess Website',
         description: 'A playable multiplayer chess game',
-        thumbnailUrl: '/images/CHESS-thumbnail.png',
+        thumbnailUrl: '/images/CHESS-thumbnail.webp',
         images: [
             {
-                src: '/images/CHESS-thumbnail.png',
+                src: '/images/CHESS-thumbnail.webp',
                 alt: 'Chess website thumbnail',
             },
             {
-                src: '/images/CHESS-01.png',
+                src: '/images/CHESS-01.webp',
                 alt: 'Chess website screenshot 1',
             },
             {
-                src: '/images/CHESS-02.png',
+                src: '/images/CHESS-02.webp',
                 alt: 'Chess website screenshot 2',
             },
         ],
@@ -84,18 +82,18 @@ const projects: Project[] = [
         id: 'b9c564ec-4811-4237-a2b8-9d180b4354547d62b',
         title: 'Chess Backend',
         description: 'The backend part of my chess site',
-        thumbnailUrl: '/images/CHESS-thumbnail.png',
+        thumbnailUrl: '/images/CHESS-thumbnail.webp',
         images: [
             {
-                src: '/images/CHESS-thumbnail.png',
+                src: '/images/CHESS-thumbnail.webp',
                 alt: 'Chess website thumbnail',
             },
             {
-                src: '/images/CHESS-01.png',
+                src: '/images/CHESS-01.webp',
                 alt: 'Chess website screenshot 1',
             },
             {
-                src: '/images/CHESS-02.png',
+                src: '/images/CHESS-02.webp',
                 alt: 'Chess website screenshot 2',
             },
         ],
@@ -111,10 +109,10 @@ const projects: Project[] = [
         id: 'b9c564ec-4811-4237-a2b8-9d1804345446d62b',
         title: 'Linktree',
         description: 'A personnal linktree website',
-        thumbnailUrl: '/images/LINKTREE-thumbnail.png',
+        thumbnailUrl: '/images/LINKTREE-thumbnail.webp',
         images: [
             {
-                src: '/images/LINKTREE-thumbnail.png',
+                src: '/images/LINKTREE-thumbnail.webp',
                 alt: 'Linktree website thumbnail',
             },
         ],
@@ -130,14 +128,14 @@ const projects: Project[] = [
         id: 'b9c564ec-4811-4237-a2b8-9d180b87d62b',
         title: 'Media Team Site',
         description: 'A blog/info site for a media team',
-        thumbnailUrl: '/images/GABC-thumbnail.png',
+        thumbnailUrl: '/images/GABC-thumbnail.webp',
         images: [
             {
-                src: '/images/GABC-thumbnail.png',
+                src: '/images/GABC-thumbnail.webp',
                 alt: 'Media team site thumbnail',
             },
             {
-                src: '/images/GABC-01.png',
+                src: '/images/GABC-01.webp',
                 alt: 'Media team site screenshot 1',
             },
         ],
@@ -153,10 +151,10 @@ const projects: Project[] = [
         id: 'b9c564ec-4811-4237-a2b8-9d180b454d62b',
         title: 'Aircraft Prediction',
         description: 'A finetuned yolo11n model on custom dataset.',
-        thumbnailUrl: '/images/AIR-thumbnail.png',
+        thumbnailUrl: '/images/AIR-thumbnail.webp',
         images: [
             {
-                src: '/images/AIR-thumbnail.png',
+                src: '/images/AIR-thumbnail.webp',
                 alt: 'Aircraft prediction thumbnail',
             },
         ],
@@ -173,10 +171,10 @@ const projects: Project[] = [
         title: 'Olhar Device',
         description:
             "At first, this sees to be nothing, but the project is actually quite complicated. It uses request to get video source URL's, download the videos one by one and show them in a loop onto the screen. After each video comes a QR code, with a link that was in the metadata.",
-        thumbnailUrl: '/images/OLHAR-thumbnail.png',
+        thumbnailUrl: '/images/OLHAR-thumbnail.webp',
         images: [
             {
-                src: '/images/OLHAR-thumbnail.png',
+                src: '/images/OLHAR-thumbnail.webp',
                 alt: 'Olhar device thumbnail',
             },
         ],
@@ -191,58 +189,16 @@ const projects: Project[] = [
 ];
 
 export default function GetProjects() {
-    const [process, setProcess] = useState<ProcessState>('loading');
-
     const request = useCallback(() => {
-        setProcess('success');
         return projects;
-    }, []);
-
-    const clearError = useCallback(() => {
-        setProcess('loading');
     }, []);
 
     const getByID = (id: string) => {
         return projects.find(project => project["id"] === id)
     };
 
-    const filterProjects = (query: string) => {
-        setProcess('loading');
-        if (!query) {
-            return projects;
-        }
-        const lowerQuery = query.toLowerCase();
-        const filtered = projects.filter((project) => {
-            const inTitle = project.title.toLowerCase().includes(lowerQuery);
-            const inDescription = project.description
-                .toLowerCase()
-                .includes(lowerQuery);
-            const inSkills = project.skills.some((skill) =>
-                skill.toLowerCase().includes(lowerQuery)
-            );
-            const inType = project.projectType
-                .toLowerCase()
-                .includes(lowerQuery);
-
-            return inTitle || inDescription || inSkills || inType;
-        });
-        setProcess('success');
-        return filtered;
-    };
-
-    const getAll = () => {
-        setProcess('loading');
-        setProcess('success');
-        return projects;
-    }
-
     return {
         request,
-        clearError,
-        process,
-        setProcess,
-        filterProjects,
-        getAll,
         getByID,
     };
 }

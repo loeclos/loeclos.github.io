@@ -69,7 +69,7 @@ function CraftButton(props: CraftButtonProps) {
                 size={size}
                 asChild={asChild}
                 className={cn(
-                    'group hover:bg-background dark:hover:border-primary/30 relative cursor-pointer overflow-hidden rounded-full duration-500 hover:shadow-md dark:border dark:border-transparent',
+                    'group hover:bg-background relative cursor-pointer overflow-hidden rounded-full duration-500 hover:shadow-md ',
                     className
                 )}
                 {...rest}
