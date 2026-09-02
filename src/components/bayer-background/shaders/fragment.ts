@@ -7,10 +7,6 @@ uniform float uTime;
 uniform float uPixelSize;
 uniform int   uShapeType;         // 0=square 1=circle 2=tri 3=diamond
 
-uniform vec2  uHover;             // cursor position (pixels), or (-1,-1) when not hovering
-uniform vec3  uHoverColor;        // ink tint for lit diamonds
-uniform float uHoverRadius;       // glow radius in uv space
-
 const int SHAPE_SQUARE   = 0;
 const int SHAPE_CIRCLE   = 1;
 const int SHAPE_TRIANGLE = 2;
@@ -164,16 +160,6 @@ void main() {
         feed = max(feed, ring * atten);
     }
 
-    /* Hover glow ------------------------------------------- */
-    float hoverGlow = 0.0;
-    if (uHover.x >= 0.0) {
-        vec2 cuv = (((uHover - uResolution * .5 - cellPixelSize * .5) / (uResolution)) ) * vec2(aspectRatio, 1.0);
-        float hr = distance(uv, cuv);
-        float h = 1.0 - smoothstep(0.0, uHoverRadius, hr);
-        feed = max(feed, 0.85 * h);   // local fill-in, untouched outside the radius
-        hoverGlow = h;
-    }
-
     float bayer = Bayer8(fragCoord / uPixelSize) - 0.5;
     float bw    = step(0.5, feed + bayer);     // ordered-dither output
 
@@ -186,7 +172,7 @@ void main() {
     else                                   M = coverage;   // default = square
     /* ====================================================== */
 
-    vec3 color = mix(uColor, uHoverColor, 0.85 * hoverGlow);
+    vec3 color = uColor;
     fragColor = vec4(color, M);
 }
 `;

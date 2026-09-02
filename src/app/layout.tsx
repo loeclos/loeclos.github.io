@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { Geist, Young_Serif, Geist_Mono, Google_Sans_Code } from 'next/font/google';
 import { ExpandableScreen } from '@/components/ui/expandable-screen'
-import BayerBackground from '@/components/bayer-background/bayer-background'
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 import './globals.css';
+import BayerBackground from '@/components/bayer-background/bayer-background';
+
 
 export const metadata: Metadata = {
   title: 'Gleb Zhukov - Developer',
@@ -38,18 +40,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="dark" lang="en">
+    <html className="dark h-full w-full" lang="en">
       <body
-        className={`${youngSerif.variable} ${googleSansCode.variable} ${geistSans.variable} ${geistMono.variable} antialiased background selection:bg-zinc-700 selection:text-zinc-200`}
+        className={`${youngSerif.variable} ${googleSansCode.variable} ${geistSans.variable} ${geistMono.variable} relative bg-[#ffe8ba] h-full antialiased selection:bg-amber-400/90 selection:text-white`}
       >
         <BayerBackground />
+
+        {/* <ShaderBackground className='absolute'/> */}
 
         <ExpandableScreen
           layoutId="cta-card"
           triggerRadius="100px"
           contentRadius="24px"
         >
-          {children}
+          <TooltipProvider>
+            {children}
+          </TooltipProvider>
         </ExpandableScreen>
       </body>
     </html>

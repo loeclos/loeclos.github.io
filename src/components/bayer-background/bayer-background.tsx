@@ -20,10 +20,7 @@ interface BayerBackgroundProps {
   shape?: Shape;
   pixelSize?: number;
   ink?: string;
-  hoverColor?: string;
-  hoverRadius?: number;
   interactive?: boolean;
-  hover?: boolean;
   className?: string;
 }
 
@@ -31,21 +28,18 @@ export default function BayerBackground({
   shape = 'diamond',
   pixelSize = 4,
   ink = '#f6cf3e',
-  hoverColor = '#ffdf80',
-  hoverRadius = 0.35,
   interactive = true,
-  hover = true,
   className = '',
 }: BayerBackgroundProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const propsRef = useRef({ shape, pixelSize, ink, hoverColor, hoverRadius, interactive, hover });
-  propsRef.current = { shape, pixelSize, ink, hoverColor, hoverRadius, interactive, hover };
+  const propsRef = useRef({ shape, pixelSize, ink, interactive });
+  propsRef.current = { shape, pixelSize, ink, interactive };
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container || typeof window === 'undefined') return;
 
-    const { shape, pixelSize, ink, hoverColor, hoverRadius, interactive, hover } =
+    const { shape, pixelSize, ink, interactive } =
       propsRef.current;
 
     const canvas = document.createElement('canvas');
@@ -70,9 +64,6 @@ export default function BayerBackground({
       uClickTimes: { value: new Float32Array(MAX_CLICKS) },
       uShapeType: { value: SHAPE_MAP[shape] ?? 0 },
       uPixelSize: { value: pixelSize },
-      uHover: { value: new THREE.Vector2(-1, -1) },
-      uHoverColor: { value: new THREE.Color(hoverColor) },
-      uHoverRadius: { value: hoverRadius },
     };
 
     const material = new THREE.ShaderMaterial({
@@ -117,20 +108,7 @@ export default function BayerBackground({
       clickIx = (clickIx + 1) % MAX_CLICKS;
     };
 
-    const onPointerMove = (e: PointerEvent) => {
-      if (!hover) return;
-      const pos = toCanvasCoords(e.clientX, e.clientY);
-      uniforms.uHover.value.set(pos.x, pos.y);
-    };
-
-    const clearHover = () => {
-      uniforms.uHover.value.set(-1, -1);
-    };
-
     window.addEventListener('pointerdown', onPointerDown);
-    window.addEventListener('pointermove', onPointerMove);
-    window.addEventListener('pointerleave', clearHover);
-    window.addEventListener('blur', clearHover);
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const clock = new THREE.Clock();
@@ -160,9 +138,6 @@ export default function BayerBackground({
       ro.disconnect();
       window.removeEventListener('resize', resize);
       window.removeEventListener('pointerdown', onPointerDown);
-      window.removeEventListener('pointermove', onPointerMove);
-      window.removeEventListener('pointerleave', clearHover);
-      window.removeEventListener('blur', clearHover);
       geometry.dispose();
       material.dispose();
       renderer.dispose();

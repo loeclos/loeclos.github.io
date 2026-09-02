@@ -44,7 +44,7 @@ function CraftButtonIcon({ children, className }: CraftButtonIconProps) {
         <span className={cn('relative z-1', iconSize, className)}>
             <span
                 className={cn(
-                    'bg-background absolute inset-0 -z-1 rounded-full transition-transform duration-500 group-hover:scale-[15]',
+                    'bg-background absolute inset-0 -z-1 rounded-full transition-transform duration-500 group-hover:scale-[25]',
                     iconSize
                 )}
             />
@@ -69,7 +69,7 @@ function CraftButton(props: CraftButtonProps) {
                 size={size}
                 asChild={asChild}
                 className={cn(
-                    'group hover:bg-background relative cursor-pointer overflow-hidden rounded-full duration-500 hover:shadow-md ',
+                    'group hover:bg-background relative cursor-pointer overflow-hidden rounded-full duration-500',
                     className
                 )}
                 {...rest}
