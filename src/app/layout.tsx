@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Young_Serif, Geist_Mono, Google_Sans_Code } from 'next/font/google';
 import { ExpandableScreen } from '@/components/ui/expandable-screen'
-import { ShaderBackground } from '@/components/ui/manu';
 import { TooltipProvider } from "@/components/ui/tooltip"
 
 import './globals.css';

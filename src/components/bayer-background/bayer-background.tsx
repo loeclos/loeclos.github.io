@@ -43,11 +43,6 @@ export default function BayerBackground({
       propsRef.current;
 
     const canvas = document.createElement('canvas');
-
-    if (canvas == null) {
-      return;
-    }
-
     canvas.className = 'block h-full w-full';
     container.appendChild(canvas);
 
