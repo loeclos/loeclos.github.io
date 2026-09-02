@@ -20,11 +20,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import GetProjects from '@/hooks/getProjects';
+import UseProjects from '@/hooks/useProjects';
 import { ProjectsResponse } from '@/types/projects';
 
 export default function ProjectsCarousel() {
-  const { request } = GetProjects();
+  const { request } = UseProjects();
   const [projects, setProjects] = useState<ProjectsResponse>([]);
   const [selectedId, setSelectedID] = useState<string | null>(null);
 

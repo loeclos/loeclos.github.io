@@ -8,6 +8,8 @@ interface url {
     url: string;
 }
 
+export type ProjectStage = 'wip-not-working' | 'wip-alpha' | 'wip-stable' | 'finished';
+
 export interface Project {
     id: string;
     title: string;
@@ -18,7 +20,14 @@ export interface Project {
     skills: string[];
     projectType: string;
     date: number;
+    stage: ProjectStage;
 }
 
+export type ProjectsByCategory = Record<ProjectStage, Project[]>;
+
+export interface CategoryWithProjects {
+    category: ProjectStage;
+    projects: Project[];
+}
 
 export type ProjectsResponse = Project[];

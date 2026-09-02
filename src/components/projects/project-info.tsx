@@ -9,7 +9,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 import { CraftButton, CraftButtonLabel, CraftButtonIcon } from '@/components/ui/craft-button'
 import { Badge } from "../ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area"
-import GetProjects from "@/hooks/getProjects";
+import UseProjects from "@/hooks/useProjects";
 import { useEffect, useState } from "react";
 import { Project } from "@/types/projects";
 import Image from 'next/image'
@@ -17,7 +17,7 @@ import Link from "next/link";
 
 
 export default function ProjectInfo({ projectId }: { projectId: string | null }) {
-    const { getByID } = GetProjects();
+    const { getByID } = UseProjects();
     const [project, setProject] = useState<Project | null>();
 
     useEffect(() => {
