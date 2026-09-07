@@ -64,10 +64,14 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="text-black mx-2 lg:mx-5 rounded-3xl p-2 flex flex-col items-center justify-center">
+        <div className="text-black mx-2 lg:mx-5 rounded-3xl p-2 flex flex-col items-start justify-center">
+          <div className="flex items-center gap-3 w-full my-2">
+            <h2 className="font-serif text-3xl self-start whitespace-nowrap">projects</h2>
+            <hr className="flex-1 border-t border-black/30" />
+          </div>
           <div>
             <span className='font-geist text-lg'>
-              <h3 className='font-serif text-2xl my-2'>wip (not working yet):</h3>
+              <h3 className='font-serif text-xl my-2'>wip (not working yet):</h3>
               <ul>
                 <li>
                   <Link href={"https://github.com/loeclos/slop"}>
@@ -78,7 +82,7 @@ export default function Hero() {
               </ul>
             </span>
             <span className='font-geist text-lg'>
-              <h3 className='font-serif text-2xl my-2'>wip (alpha kinda version):</h3>
+              <h3 className='font-serif text-xl my-2'>wip (alpha kinda version):</h3>
               <ul>
                 <li>
                   <Link href={"https://github.com/terriblethinking/cli"}>
@@ -93,7 +97,7 @@ export default function Hero() {
               </ul>
             </span>
             <span className='font-geist text-lg'>
-              <h3 className='font-serif text-2xl my-2'>wip, stable:</h3>
+              <h3 className='font-serif text-xl my-2'>wip, stable:</h3>
               <ul>
                 <li>
                   <Link href={"https://github.com/terriblethinking/engine"}>
@@ -116,7 +120,7 @@ export default function Hero() {
               </ul>
             </span>
             <span className='font-geist text-lg'>
-              <h3 className='font-serif text-2xl my-2'>stuff im finished with:</h3>
+              <h3 className='font-serif text-xl my-2'>stuff im finished with:</h3>
               <ul>
                 <li>
                   <Link href={"https://github.com/loeclos/forge"}>
@@ -157,6 +161,7 @@ export default function Hero() {
               </ul>
             </span>
           </div>
+          <hr className="w-full border-t border-black/30 mt-4" />
         </div>
 
         <div className="bg-black mx-2 lg:mx-5 rounded-3xl shadow-lg shadow-amber-800/10 flex flex-col items-center justify-center">
